@@ -1,0 +1,17 @@
+extends: existence
+message: "[cliche-ia] '%s': clichê de IA. Corta."
+level: error
+ignorecase: true
+tokens:
+  - 'ótima pergunta'
+  - 'excelente ponto'
+  - 'excelente pergunta'
+  - 'fico feliz em ajudar'
+  - 'estou aqui para ajudar'
+  - 'espero ter ajudado'
+  - 'faz total sentido'
+  - 'isso muda tudo'
+  - 'um divisor de águas'
+  - 'de tirar o fôlego'
+  - 'você não vai acreditar'
+  - 'vai te surpreender'

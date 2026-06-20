@@ -1,0 +1,6 @@
+extends: existence
+message: "[cliche-ia] travessão como recurso. Use vírgula, ponto ou dois pontos."
+level: suggestion
+nonword: true
+tokens:
+  - '—'

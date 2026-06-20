@@ -1,0 +1,28 @@
+extends: existence
+message: "[voz-passiva] '%s': voz passiva ou impessoal. Põe sujeito, voz ativa."
+level: warning
+ignorecase: true
+tokens:
+  - 'foi feito'
+  - 'foi realizado'
+  - 'foi observado'
+  - 'foi constatado'
+  - 'foi verificado'
+  - 'foi identificado'
+  - 'foi elaborado'
+  - 'foram feitos'
+  - 'foram realizados'
+  - 'foram observados'
+  - 'pode-se notar'
+  - 'pode-se observar'
+  - 'pode-se perceber'
+  - 'pode-se afirmar'
+  - 'pode-se dizer'
+  - 'pode-se concluir'
+  - 'é possível notar'
+  - 'é possível observar'
+  - 'é possível perceber'
+  - 'nota-se que'
+  - 'observa-se que'
+  - 'percebe-se que'
+  - 'constata-se que'

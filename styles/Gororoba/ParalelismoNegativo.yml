@@ -1,0 +1,8 @@
+extends: existence
+message: "[cliche-ia] '%s': paralelismo negativo 'não é X, é Y'. Quebra o molde, varia o formato."
+level: suggestion
+ignorecase: true
+tokens:
+  - 'não é [^,.]{2,40}, é '
+  - 'não se trata de [^,.]{2,40}, e sim'
+  - 'não se trata de [^,.]{2,40}, mas sim'

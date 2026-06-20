@@ -1,0 +1,32 @@
+extends: existence
+message: "[conectivo-traducao] '%s': conectivo de tradução. Começa pela informação."
+level: warning
+ignorecase: true
+tokens:
+  - 'vale ressaltar que'
+  - 'vale destacar que'
+  - 'vale lembrar que'
+  - 'vale mencionar que'
+  - 'é importante notar que'
+  - 'é importante ressaltar que'
+  - 'é importante destacar que'
+  - 'é importante lembrar que'
+  - 'é fundamental compreender'
+  - 'cabe destacar'
+  - 'cabe ressaltar'
+  - 'nesse sentido'
+  - 'neste sentido'
+  - 'dito isso'
+  - 'posto isso'
+  - 'sendo assim'
+  - 'diante disso'
+  - 'diante do exposto'
+  - 'em suma'
+  - 'em síntese'
+  - 'em última análise'
+  - 'ademais'
+  - 'outrossim'
+  - 'não obstante'
+  - 'dessa forma'
+  - 'desta forma'
+  - 'com efeito'

@@ -1,0 +1,11 @@
+extends: substitution
+message: "[voz-passiva] gerundismo de call center: use '%s' no lugar de '%s'."
+level: warning
+ignorecase: true
+swap:
+  'vou estar enviando': 'envio'
+  'vou estar verificando': 'verifico'
+  'vou estar fazendo': 'faço'
+  'vou estar retornando': 'retorno'
+  'vamos estar verificando': 'verificamos'
+  'estaremos retornando': 'retornamos'

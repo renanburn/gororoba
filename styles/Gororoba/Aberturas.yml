@@ -1,0 +1,14 @@
+extends: existence
+message: "[cliche-ia] '%s': abertura de garganta limpa. Vai direto na informação."
+level: warning
+ignorecase: true
+tokens:
+  - 'no mundo de hoje'
+  - 'nos dias de hoje'
+  - 'em um mundo cada vez mais'
+  - 'em um cenário cada vez mais'
+  - 'vivemos em uma era'
+  - 'mais do que nunca'
+  - 'você já parou para pensar'
+  - 'antes de mais nada'
+  - 'sem mais delongas'
