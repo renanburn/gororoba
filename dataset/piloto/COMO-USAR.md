@@ -1,6 +1,6 @@
 # Piloto: como usar (Renan + 1 amigo)
 
-15 textos. Cada um de vocês dá nota sozinho, sem ver a do outro. Não precisa saber nada de gramática.
+20 textos. Cada um de vocês dá nota sozinho, sem ver a do outro. Não precisa saber nada de gramática.
 
 ## Passo a passo
 
@@ -23,4 +23,4 @@
 
 ## Por que isso importa
 
-Esses 15 são o teste do teste: servem pra ver se as 3 perguntas estão claras o bastante pra duas pessoas darem notas parecidas. Se passar, a gente parte pros 100-150 textos de verdade. Se duas pessoas não concordam, a régua ainda não tá pronta, e é melhor descobrir agora.
+Esses 20 são o teste do teste: servem pra ver se as 3 perguntas estão claras o bastante pra duas pessoas darem notas parecidas. Se passar, a gente parte pros 100-150 textos de verdade. Se duas pessoas não concordam, a régua ainda não tá pronta, e é melhor descobrir agora.
