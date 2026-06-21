@@ -73,11 +73,11 @@
 
 <div class="wrap">
   <details class="leg" open><summary>Como funciona (leia uma vez)</summary><div class="body">
-    <p>Pra cada texto, três perguntas. Em cada uma você responde <b>Nada</b>, <b>Um pouco</b> ou <b>Cheio</b>. Toca no <b>?</b> ao lado da pergunta pra ver exemplos a qualquer hora.</p>
+    <p>Pra cada texto, três perguntas. Em cada uma você responde <b>Não</b>, <b>Um pouco</b> ou <b>Sim</b>. "Sim" é quando tem e pega o tom do texto; "Um pouco" é um caso isolado. Toca no <b>?</b> ao lado da pergunta pra ver exemplos a qualquer hora.</p>
     <div class="item"><b>1. Enrolação no começo.</b> Palavra que enfeita e não diz nada, jeito de redação de escola.<br><span class="ex">Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".</span></div>
     <div class="item"><b>2. Frase sem dono.</b> Ninguém aparece fazendo, soa a relatório frio.<br><span class="ex">Tipo: "foi feito", "pode-se observar", "foi realizado com sucesso", "vou estar enviando".</span></div>
     <div class="item"><b>3. Cara de robô.</b> Frase pronta que toda IA solta, abertura de textão.<br><span class="ex">Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", e travessão usado de enfeite.</span></div>
-    <div class="ouro"><b>Regra de ouro:</b> pontua pelo que está no texto, não pelo sotaque. Gente que fala simples ou puxa pro mineirês não é robô. "Cê viu o trem, sô" é <b>Nada</b> nas três.</div>
+    <div class="ouro"><b>Regra de ouro:</b> pontua pelo que está no texto, não pelo sotaque. Gente que fala simples ou puxa pro mineirês não é robô. "Cê viu o trem, sô" é <b>Não</b> nas três.</div>
   </div></details>
 </div>
 
@@ -110,7 +110,7 @@ const EIXOS = [
   {k:"v", ask:"As frases escondem quem fez?", t:"Frase sem dono", x:'Ninguém aparece fazendo, soa a relatório frio. Tipo: "foi feito", "pode-se observar", "foi realizado", "vou estar enviando".'},
   {k:"l", ask:"Tem clichê, cara de IA?", t:"Cara de robô", x:'Frase pronta que toda IA solta. Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", e travessão de enfeite.'},
 ];
-const VALS = ["Nada","Um pouco","Cheio"]; // índice = score 0/1/2
+const VALS = ["Não","Um pouco","Sim"]; // índice = score 0/1/2 (Sim = tem, e forte)
 const COL = {c:"conectivo_score", v:"vozpassiva_score", l:"cliche_score"};
 const $ = s => document.querySelector(s);
 let who = "", state = {};
