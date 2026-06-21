@@ -36,23 +36,22 @@ não quer dizer quem fez. Inclui gerundismo ("vou estar verificando").
 - Exemplo 0 (ausente): *"A gente reparou que dá pra melhorar isso."*
 
 ### 3. clichê-IA (`cliche_score`)
-Frase-feita de assistente, abertura de palestra, estrutura previsível, **e apelo de
-propaganda/SEO**. O som de IA sendo educada, de blogueiro genérico, ou de anúncio.
+Frase-feita de assistente, abertura de palestra, estrutura previsível. O som de IA
+sendo educada ou de blogueiro genérico. **Sentido estrito: só clichê de IA.** Hype de
+propaganda/SEO ("descubra agora", "dicas infalíveis") NÃO entra aqui na v0: o piloto 2
+mostrou que juntar os dois numa pergunta derruba a concordância. Propaganda vira eixo
+próprio na v0.2 (regra guardada em `deferred/Hype.yml`).
 
-- Pega (clichê de IA): "ótima pergunta", "com certeza", "fico feliz em ajudar", "no
-  mundo de hoje", "mais do que nunca", paralelismo negativo ("não é X, é Y"), regra
-  dos três decorativa, travessão usado como recurso de efeito.
-- Pega (hype de propaganda/SEO): "descubra agora", "dicas infalíveis", "a número 4 vai
-  te surpreender", "você veio ao lugar certo", "continue lendo", "transforme a sua",
-  "neste artigo", "o segredo que ninguém te conta". É outro sabor do mesmo eixo: frase
-  pronta que vende em vez de dizer (expandido após o piloto 1, que mostrou que o SEO
-  passava batido).
-- **Não pega gíria nem mineirês.** "brabo", "sô", "cê", "trem", "uai", fala falada e
-  regional NÃO são clichê de IA: pontue 0. Esse é o anteparo anti-viés, e o piloto 1
-  mostrou que ele vazava aqui (mineirês levou 1-2), então é a regra mais dura do eixo.
+- Pega: "ótima pergunta", "com certeza", "fico feliz em ajudar", "no mundo de hoje",
+  "mais do que nunca", paralelismo negativo ("não é X, é Y"), regra dos três
+  decorativa, travessão usado como recurso de efeito.
+- **Não pega gíria nem mineirês (anteparo anti-viés, a regra mais dura do eixo).**
+  "brabo", "sô", "cê", "trem", "uai", "bora", fala falada e regional são clichê 0,
+  sempre. O piloto 2 mostrou que isso vaza com anotador de fora (mineirês levou 2),
+  então a interface mostra os exemplos calibrados na cara do anotador, não só numa regra.
 - Não pega também: ênfase real, repetição de propósito, travessão gramatical correto em
-  aposto curto. O alvo é o clichê/hype, não a pontuação em si.
-- Exemplo 2 (forte): *"Ótima pergunta! No mundo de hoje, mais do que nunca..."* / *"Descubra agora as 7 dicas infalíveis: a número 4 vai te surpreender."*
+  aposto curto. O alvo é o clichê, não a pontuação em si.
+- Exemplo 2 (forte): *"Ótima pergunta! No mundo de hoje, mais do que nunca..."*
 - Exemplo 0 (ausente): *"Boa. A resposta curta é não."* / *"Esse trem ficou brabo, sô. Liga o som e vê."*
 
 ## A escala (0 / 1 / 2 por eixo)

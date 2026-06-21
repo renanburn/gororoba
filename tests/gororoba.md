@@ -13,7 +13,3 @@ Não é sobre tecnologia, é sobre pessoas. Vou estar enviando o relatório aind
 
 Sendo assim, cabe destacar que ademais, dessa forma, observa-se que foi realizado
 com sucesso.
-
-Você está procurando o melhor restaurante? Então você veio ao lugar certo! Neste
-artigo, descubra agora as 7 dicas infalíveis: a número 4 vai te surpreender.
-Continue lendo e transforme a sua rotina hoje mesmo.

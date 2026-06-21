@@ -1,6 +1,6 @@
 # Piloto: como usar (Renan + 1 amigo)
 
-20 textos. Cada um de vocês dá nota sozinho, sem ver a do outro. Não precisa saber nada de gramática.
+15 textos. Cada um de vocês dá nota sozinho, sem ver a do outro. Não precisa saber nada de gramática.
 
 ## Passo a passo
 
