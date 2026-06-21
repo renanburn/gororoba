@@ -1,0 +1,16 @@
+id,trecho,fonte,classe_origem
+p01,Esse método corta metade do retrabalho. Testei em 3 projetos.,papo-reto/exemplos.md (depois #6),humano-com-voz
+p02,Quem não aparece online hoje perde cliente pra quem aparece. Simples assim.,papo-reto/exemplos.md (depois #1),humano-com-voz
+p03,"Esse trem ficou brabo, sô. Liga o som e vê.",papo-reto/exemplos.md (depois #4),humano-simples-regional
+p04,"Esse trem aqui é bom dimais, sô. Cê vai gostar.",papo-reto/exemplos.md (depois #10),humano-simples-regional
+p05,"O CONTRATANTE pagará ao CONTRATADO o valor mensal de R$ 18.700,00, em até cinco dias úteis após a emissão da nota fiscal correspondente.",registro contratual (composto),humano-formal-legitimo
+p06,A autenticação usa NextAuth com JWT. O backend revalida o papel do usuário a cada request e não confia no token enviado pelo cliente.,registro técnico (composto),humano-formal-legitimo
+p07,"É importante ressaltar que a gestão eficiente de projetos é fundamental para o sucesso de qualquer organização. Nesse sentido, adotar boas práticas pode potencializar os resultados de forma significativa.","gerado (gororoba pilot, slop genérico)",ia-sem-voz
+p08,"A tecnologia tem desempenhado um papel cada vez mais relevante no cenário atual. Diante disso, empresas que investem em inovação tendem a se destacar no mercado de maneira expressiva.","gerado (gororoba pilot, slop genérico)",ia-sem-voz
+p09,"Vale destacar que a comunicação é a base de qualquer relacionamento saudável. Dessa forma, torna-se essencial cultivar o diálogo de maneira contínua e transparente.","gerado (gororoba pilot, slop genérico)",ia-sem-voz
+p10,"No final do dia, trata-se de entregar valor. Nós acreditamos que cada cliente merece o melhor, e é por isso que vamos a milha extra todos os dias.","gerado (gororoba pilot, translationese EN->PT)",traducao-automatica
+p11,"Deixe-me ser claro: isto não é sobre dinheiro. Isto é sobre fazer a diferença na vida das pessoas, uma pessoa de cada vez.","gerado (gororoba pilot, translationese EN->PT)",traducao-automatica
+p12,"Você está procurando o melhor restaurante em Belo Horizonte? Então você veio ao lugar certo! Neste artigo, vamos mostrar tudo o que você precisa saber para escolher a opção ideal.","gerado (gororoba pilot, SEO genérico)",seo-generico
+p13,Descubra agora as 7 dicas infalíveis para turbinar a sua produtividade. A número 4 vai te surpreender! Continue lendo e transforme a sua rotina hoje mesmo.,"gerado (gororoba pilot, SEO genérico)",seo-generico
+p14,Cortei a cena em 12 segundos porque o ritmo caía depois disso. Testei com 18 e com 9; 12 foi onde a piada respirava sem arrastar.,"gerado (gororoba pilot, IA bem-promptada)",ia-bem-promptada
+p15,"O show começa sete da noite. Quem chega depois das seis não pega estacionamento, então combina a carona antes.","gerado (gororoba pilot, IA bem-promptada)",ia-bem-promptada
