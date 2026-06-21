@@ -3,105 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>gororoba · anotação piloto</title>
+<title>gororoba · você é o juiz</title>
 <style>
   :root{--paper:#f4f1ec;--fg:#1a1f1a;--fg2:#5a625a;--fg3:#8a928a;--line:#dcdacf;--algae:#5f6f57;--algae-hi:#7a8a77;--amber:#b8863b;--card:#fbfaf6}
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
   .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  header{position:sticky;top:0;z-index:10;background:rgba(244,241,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 20px}
-  .wrap{max-width:780px;margin:0 auto;padding:0 20px}
-  h1{font-size:20px;margin:0 0 2px;font-weight:600}
+  header{position:sticky;top:0;z-index:10;background:rgba(244,241,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  h1{font-size:20px;margin:0 0 3px;font-weight:600}
   h1 .g{color:var(--algae)}
-  .sub{font-size:12.5px;color:var(--fg2);margin:0}
+  .sub{font-size:13.5px;color:var(--fg2);margin:0;max-width:620px}
   .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-  .who{margin-top:10px}
-  .who input{font:14px/1 inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--fg)}
-  .prog{font-size:12px;color:var(--fg2);margin-left:auto}
+  .who{margin-top:12px}
+  .who input{font:14px/1 inherit;padding:9px 11px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--fg);min-width:180px}
+  .prog{font-size:12.5px;color:var(--fg2);margin-left:auto}
   .bar{height:4px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:8px}
-  .bar > i{display:block;height:100%;background:var(--algae);width:0;transition:width .2s}
+  .bar > i{display:block;height:100%;background:var(--algae);width:0;transition:width .25s}
   details.leg{margin:16px 0;border:1px solid var(--line);border-radius:8px;background:var(--card)}
-  details.leg summary{cursor:pointer;padding:12px 16px;font-size:13px;font-weight:600;color:var(--algae)}
-  .leg .body{padding:0 16px 14px;font-size:13px;color:var(--fg2)}
-  .leg table{width:100%;border-collapse:collapse;margin:8px 0}
-  .leg td{padding:4px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-  .leg td:first-child{font-weight:700;color:var(--fg);width:24px}
+  details.leg summary{cursor:pointer;padding:13px 16px;font-size:14px;font-weight:600;color:var(--algae)}
+  .leg .body{padding:0 16px 16px;font-size:14px;color:var(--fg2)}
+  .leg .item{padding:9px 0;border-top:1px solid var(--line)}
+  .leg .item b{color:var(--fg)}
+  .leg .ex{color:var(--fg3);font-size:13px}
+  .leg .ouro{margin-top:12px;padding:11px 13px;background:rgba(95,111,87,.08);border-radius:7px;font-size:13.5px;color:var(--fg)}
   main{padding:8px 0 40px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:14px 0}
-  .card.done{border-color:var(--algae-hi)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:18px;margin:14px 0}
+  .card.done{border-color:var(--algae-hi);box-shadow:0 0 0 1px var(--algae-hi) inset}
   .card .n{font-size:11px;color:var(--fg3);letter-spacing:.12em;text-transform:uppercase}
-  .trecho{font-size:17px;line-height:1.55;margin:8px 0 16px}
-  .eixo{display:flex;align-items:center;gap:10px;margin:8px 0;flex-wrap:wrap}
-  .eixo .lab{font-size:12px;color:var(--fg2);min-width:130px}
-  .eixo .lab b{color:var(--fg);display:block;font-size:12.5px}
-  .btns{display:flex;gap:6px}
-  .btns button{width:42px;height:34px;border:1px solid var(--line);background:#fff;border-radius:6px;font:600 14px/1 inherit;color:var(--fg2);cursor:pointer}
+  .trecho{font-size:18px;line-height:1.55;margin:8px 0 18px}
+  .q{margin:14px 0}
+  .q .ask{font-size:14.5px;color:var(--fg);margin-bottom:7px;display:flex;align-items:center;gap:8px}
+  .qi{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid var(--algae-hi);color:var(--algae);font-size:12px;font-weight:700;cursor:pointer;flex:none}
+  .btns{display:flex;gap:8px;flex-wrap:wrap}
+  .btns button{padding:9px 16px;border:1px solid var(--line);background:#fff;border-radius:8px;font:600 14px/1 inherit;color:var(--fg2);cursor:pointer}
   .btns button.sel{background:var(--algae);border-color:var(--algae);color:#fff}
-  .notas{width:100%;margin-top:8px;border:1px solid var(--line);border-radius:6px;padding:8px;font:13px/1.4 inherit;background:#fff;color:var(--fg);resize:vertical;min-height:32px}
-  footer{position:sticky;bottom:0;background:rgba(244,241,236,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 0}
-  button.act{background:var(--algae);color:#fff;border:none;border-radius:7px;padding:11px 18px;font:600 13px/1 inherit;cursor:pointer}
-  button.ghost{background:transparent;border:1px solid var(--line);color:var(--fg2);border-radius:7px;padding:11px 14px;font:13px/1 inherit;cursor:pointer}
+  .notas{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:6px;padding:8px;font:13px/1.4 inherit;background:#fff;color:var(--fg);resize:vertical;min-height:30px}
+  footer{position:sticky;bottom:0;background:rgba(244,241,236,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 0}
+  button.act{background:var(--algae);color:#fff;border:none;border-radius:7px;padding:12px 18px;font:600 14px/1 inherit;cursor:pointer}
+  button.ghost{background:transparent;border:1px solid var(--line);color:var(--fg2);border-radius:7px;padding:12px 14px;font:13px/1 inherit;cursor:pointer}
   .msg{font-size:12.5px;color:var(--fg2)}
-  .kappa{margin:34px 0;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:18px}
-  .kappa h2{font-size:15px;margin:0 0 4px}
-  .kappa table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px}
-  .kappa th,.kappa td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left}
-  .kappa th{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--fg3)}
-  .pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}
-  .file{font-size:13px;margin:6px 0}
+  .check{margin:34px 0;border:1px solid var(--line);border-radius:11px;background:var(--card);padding:18px}
+  .check h2{font-size:16px;margin:0 0 4px}
+  .check table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+  .check th,.check td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+  .check th{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--fg3)}
+  .pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:700}
+  .file{font-size:13.5px;margin:7px 0}
+  details.tec summary{cursor:pointer;font-size:12.5px;color:var(--fg3);margin-top:10px}
+  details.tec .body{font-size:12.5px;color:var(--fg2);padding-top:6px}
+  .pop{position:fixed;inset:0;background:rgba(26,31,26,.34);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .pop.on{display:flex}
+  .pop-box{background:var(--paper);border:1px solid var(--line);border-radius:12px;max-width:420px;padding:20px}
+  .pop-box b{font-size:16px;display:block;margin-bottom:8px;color:var(--fg)}
+  .pop-box p{font-size:14px;color:var(--fg2);margin:0 0 16px}
+  .pop-box .closeb{background:var(--algae);color:#fff;border:none;border-radius:7px;padding:9px 16px;font:600 13px/1 inherit;cursor:pointer}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <h1><span class="g">gororoba</span> · anotação piloto</h1>
-  <p class="sub">Pontue cada trecho de 0 a 2 nos 3 eixos. Anotação <b>cega</b> e <b>independente</b>: não veja a do outro antes de exportar. Salva sozinho no navegador.</p>
+  <h1><span class="g">gororoba</span> · você é o juiz</h1>
+  <p class="sub">Lê cada texto e diz o quanto ele tem cara de coisa requentada, escrita no automático por robô. Três perguntas por texto. Não precisa saber nada de gramática, é no ouvido. Salva sozinho.</p>
   <div class="row who">
-    <label class="mono" style="font-size:12px;color:var(--fg2)">QUEM É VOCÊ:</label>
-    <input id="who" placeholder="seu nome (ex: renan)" autocomplete="off">
-    <span class="prog" id="prog">0/0 completos</span>
+    <input id="who" placeholder="seu nome ou apelido" autocomplete="off">
+    <span class="prog" id="prog">0 de 0 feitos</span>
   </div>
   <div class="bar"><i id="barfill"></i></div>
 </div></header>
 
 <div class="wrap">
-  <details class="leg"><summary>Como pontuar (abre/fecha)</summary><div class="body">
-    <p><b>A escala, por eixo:</b></p>
-    <table>
-      <tr><td>0</td><td><b>ausente</b> — nenhum tell do eixo, ou só uso legítimo (passiva técnica, conjunção viva).</td></tr>
-      <tr><td>1</td><td><b>leve</b> — um tell isolado, marca discreta que não domina o trecho.</td></tr>
-      <tr><td>2</td><td><b>forte</b> — dois ou mais tells, ou um tell que define o tom do trecho.</td></tr>
-    </table>
-    <p><b>Os 3 eixos:</b></p>
-    <table>
-      <tr><td style="width:140px;font-weight:700;color:var(--fg)">conectivo</td><td>conectivo de tradução/redação: "vale ressaltar", "nesse sentido", "em suma", "ademais", "dessa forma".</td></tr>
-      <tr><td style="font-weight:700;color:var(--fg)">voz passiva</td><td>passiva ou impessoal: "foi feito/observado", "pode-se notar", gerundismo ("vou estar enviando").</td></tr>
-      <tr><td style="font-weight:700;color:var(--fg)">clichê IA</td><td>clichê/abertura: "ótima pergunta", "no mundo de hoje", travessão como recurso, "não é X, é Y".</td></tr>
-    </table>
-    <p class="mono" style="font-size:11.5px;color:var(--fg3)">Na dúvida entre dois valores, escolha o menor. Mineirês e fala simples NÃO são slop: pontue pelo que está no texto, não pelo registro.</p>
+  <details class="leg" open><summary>Como funciona (leia uma vez)</summary><div class="body">
+    <p>Pra cada texto, três perguntas. Em cada uma você responde <b>Nada</b>, <b>Um pouco</b> ou <b>Cheio</b>. Toca no <b>?</b> ao lado da pergunta pra ver exemplos a qualquer hora.</p>
+    <div class="item"><b>1. Enrolação no começo.</b> Palavra que enfeita e não diz nada, jeito de redação de escola.<br><span class="ex">Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".</span></div>
+    <div class="item"><b>2. Frase sem dono.</b> Ninguém aparece fazendo, soa a relatório frio.<br><span class="ex">Tipo: "foi feito", "pode-se observar", "foi realizado com sucesso", "vou estar enviando".</span></div>
+    <div class="item"><b>3. Cara de robô.</b> Frase pronta que toda IA solta, abertura de textão.<br><span class="ex">Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", e travessão usado de enfeite.</span></div>
+    <div class="ouro"><b>Regra de ouro:</b> pontua pelo que está no texto, não pelo sotaque. Gente que fala simples ou puxa pro mineirês não é robô. "Cê viu o trem, sô" é <b>Nada</b> nas três.</div>
   </div></details>
 </div>
 
 <main class="wrap" id="cards"></main>
 
 <footer><div class="wrap row">
-  <button class="act" id="exp">Exportar minha anotação (.csv)</button>
-  <button class="ghost" id="clr">Limpar minhas respostas</button>
+  <button class="act" id="exp">Salvar minha resposta (.csv)</button>
+  <button class="ghost" id="clr">Limpar</button>
   <span class="msg" id="msg"></span>
 </div></footer>
 
 <div class="wrap">
-  <div class="kappa">
-    <h2>Comparar duas anotações (kappa de Cohen)</h2>
-    <p class="msg">Depois que os dois exportarem, carregue os 2 CSVs aqui. O kappa por eixo sai na hora (mesma conta do <span class="mono">kappa.py</span>). Faça isso <b>antes</b> de conversar sobre os desacordos: o número honesto é o de antes do consenso.</p>
-    <div class="file">Anotador A: <input type="file" id="fa" accept=".csv"></div>
-    <div class="file">Anotador B: <input type="file" id="fb" accept=".csv"></div>
+  <div class="check">
+    <h2>Vocês deram as mesmas notas?</h2>
+    <p class="msg">Quando os dois terminarem, cada um salva o seu arquivo e carrega os dois aqui. A gente mostra em quantos textos vocês bateram a mesma nota, por pergunta. Faça isso <b>antes</b> de conversar sobre as diferenças.</p>
+    <div class="file">Resposta de um: <input type="file" id="fa" accept=".csv"></div>
+    <div class="file">Resposta do outro: <input type="file" id="fb" accept=".csv"></div>
     <div id="kres"></div>
   </div>
 </div>
 
+<div class="pop" id="pop"><div class="pop-box">
+  <b id="pop-t"></b><p id="pop-x"></p><button class="closeb" id="pop-c">fechar</button>
+</div></div>
+
 <script>
 const TRECHOS = [{"id": "p01", "trecho": "Esse método corta metade do retrabalho. Testei em 3 projetos."}, {"id": "p02", "trecho": "Quem não aparece online hoje perde cliente pra quem aparece. Simples assim."}, {"id": "p03", "trecho": "Esse trem ficou brabo, sô. Liga o som e vê."}, {"id": "p04", "trecho": "Esse trem aqui é bom dimais, sô. Cê vai gostar."}, {"id": "p05", "trecho": "O CONTRATANTE pagará ao CONTRATADO o valor mensal de R$ 18.700,00, em até cinco dias úteis após a emissão da nota fiscal correspondente."}, {"id": "p06", "trecho": "A autenticação usa NextAuth com JWT. O backend revalida o papel do usuário a cada request e não confia no token enviado pelo cliente."}, {"id": "p07", "trecho": "É importante ressaltar que a gestão eficiente de projetos é fundamental para o sucesso de qualquer organização. Nesse sentido, adotar boas práticas pode potencializar os resultados de forma significativa."}, {"id": "p08", "trecho": "A tecnologia tem desempenhado um papel cada vez mais relevante no cenário atual. Diante disso, empresas que investem em inovação tendem a se destacar no mercado de maneira expressiva."}, {"id": "p09", "trecho": "Vale destacar que a comunicação é a base de qualquer relacionamento saudável. Dessa forma, torna-se essencial cultivar o diálogo de maneira contínua e transparente."}, {"id": "p10", "trecho": "No final do dia, trata-se de entregar valor. Nós acreditamos que cada cliente merece o melhor, e é por isso que vamos a milha extra todos os dias."}, {"id": "p11", "trecho": "Deixe-me ser claro: isto não é sobre dinheiro. Isto é sobre fazer a diferença na vida das pessoas, uma pessoa de cada vez."}, {"id": "p12", "trecho": "Você está procurando o melhor restaurante em Belo Horizonte? Então você veio ao lugar certo! Neste artigo, vamos mostrar tudo o que você precisa saber para escolher a opção ideal."}, {"id": "p13", "trecho": "Descubra agora as 7 dicas infalíveis para turbinar a sua produtividade. A número 4 vai te surpreender! Continue lendo e transforme a sua rotina hoje mesmo."}, {"id": "p14", "trecho": "Cortei a cena em 12 segundos porque o ritmo caía depois disso. Testei com 18 e com 9; 12 foi onde a piada respirava sem arrastar."}, {"id": "p15", "trecho": "O show começa sete da noite. Quem chega depois das seis não pega estacionamento, então combina a carona antes."}];
-const EIXOS = [["c","conectivo","conectivo de tradução"],["v","voz passiva","voz passiva / impessoal"],["l","clichê IA","clichê / abertura de IA"]];
+const EIXOS = [
+  {k:"c", ask:"Tem enrolação pra começar frase?", t:"Enrolação no começo", x:'Palavra que enfeita e não diz nada, jeito de redação de escola. Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".'},
+  {k:"v", ask:"As frases escondem quem fez?", t:"Frase sem dono", x:'Ninguém aparece fazendo, soa a relatório frio. Tipo: "foi feito", "pode-se observar", "foi realizado", "vou estar enviando".'},
+  {k:"l", ask:"Tem clichê, cara de IA?", t:"Cara de robô", x:'Frase pronta que toda IA solta. Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", e travessão de enfeite.'},
+];
+const VALS = ["Nada","Um pouco","Cheio"]; // índice = score 0/1/2
 const COL = {c:"conectivo_score", v:"vozpassiva_score", l:"cliche_score"};
 const $ = s => document.querySelector(s);
 let who = "", state = {};
@@ -116,13 +125,13 @@ function render(){
     const st = state[t.id] || {};
     const card = document.createElement("div");
     card.className = "card" + ((st.c!=null&&st.v!=null&&st.l!=null) ? " done":"");
-    let h = '<div class="n">trecho '+(i+1)+' de '+TRECHOS.length+' · '+t.id+'</div><div class="trecho">'+esc(t.trecho)+'</div>';
-    EIXOS.forEach(([k,lab,full]) => {
-      h += '<div class="eixo"><div class="lab"><b>'+lab+'</b>'+full+'</div><div class="btns" data-id="'+t.id+'" data-k="'+k+'">';
-      for(let v=0; v<=2; v++) h += '<button data-v="'+v+'" class="'+(st[k]===v?"sel":"")+'">'+v+'</button>';
+    let h = '<div class="n">texto '+(i+1)+' de '+TRECHOS.length+'</div><div class="trecho">'+esc(t.trecho)+'</div>';
+    EIXOS.forEach(e => {
+      h += '<div class="q"><div class="ask">'+esc(e.ask)+' <span class="qi" data-k="'+e.k+'">?</span></div><div class="btns" data-id="'+t.id+'" data-k="'+e.k+'">';
+      VALS.forEach((lab,v) => h += '<button data-v="'+v+'" class="'+(st[e.k]===v?"sel":"")+'">'+lab+'</button>');
       h += '</div></div>';
     });
-    h += '<textarea class="notas" data-id="'+t.id+'" placeholder="nota (opcional)">'+esc(st.n||"")+'</textarea>';
+    h += '<textarea class="notas" data-id="'+t.id+'" placeholder="quer anotar algo? (opcional)">'+esc(st.n||"")+'</textarea>';
     card.innerHTML = h;
     root.appendChild(card);
   });
@@ -141,13 +150,20 @@ function bind(){
       progress();
     };
   }));
+  document.querySelectorAll(".qi").forEach(q => q.onclick = () => {
+    const e = EIXOS.find(x => x.k===q.dataset.k);
+    $("#pop-t").textContent = e.t; $("#pop-x").textContent = e.x; $("#pop").classList.add("on");
+  });
   document.querySelectorAll("textarea.notas").forEach(ta => ta.oninput = () => {
     const id=ta.dataset.id; state[id]=state[id]||{}; state[id].n=ta.value; save();
   });
 }
+$("#pop-c").onclick = () => $("#pop").classList.remove("on");
+$("#pop").onclick = e => { if(e.target.id==="pop") $("#pop").classList.remove("on"); };
+
 function progress(){
   const done = TRECHOS.filter(t => { const s=state[t.id]||{}; return s.c!=null&&s.v!=null&&s.l!=null; }).length;
-  $("#prog").textContent = done+"/"+TRECHOS.length+" completos";
+  $("#prog").textContent = done+" de "+TRECHOS.length+" feitos";
   $("#barfill").style.width = (100*done/TRECHOS.length)+"%";
 }
 function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
@@ -155,23 +171,22 @@ function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;"
 $("#who").oninput = e => { who = e.target.value.trim(); load(); render(); };
 
 $("#exp").onclick = () => {
-  if(!who){ msg("Põe seu nome em QUEM É VOCÊ antes de exportar."); return; }
+  if(!who){ msg("Escreve teu nome ali em cima antes de salvar."); return; }
   const done = TRECHOS.filter(t => { const s=state[t.id]||{}; return s.c!=null&&s.v!=null&&s.l!=null; }).length;
-  if(done < TRECHOS.length && !confirm("Faltam "+(TRECHOS.length-done)+" trecho(s). Exportar mesmo assim?")) return;
+  if(done < TRECHOS.length && !confirm("Faltam "+(TRECHOS.length-done)+" texto(s). Salvar mesmo assim?")) return;
   const rows = [["id","trecho","conectivo_score","vozpassiva_score","cliche_score","anotador","notas"]];
-  TRECHOS.forEach(t => { const s=state[t.id]||{};
-    rows.push([t.id, t.trecho, s.c??"", s.v??"", s.l??"", who, s.n||""]); });
+  TRECHOS.forEach(t => { const s=state[t.id]||{}; rows.push([t.id, t.trecho, s.c??"", s.v??"", s.l??"", who, s.n||""]); });
   const csv = rows.map(r => r.map(csvCell).join(",")).join("\n");
-  dl("anotacao-"+who.replace(/[^a-z0-9_-]/gi,"_")+".csv", csv);
-  msg("Exportado. Manda esse arquivo pro outro anotador (ou junta os dois aqui embaixo).");
+  dl("resposta-"+who.replace(/[^a-z0-9_-]/gi,"_")+".csv", csv);
+  msg("Salvo. Manda esse arquivo pro outro (ou junta os dois ali embaixo).");
 };
-$("#clr").onclick = () => { if(confirm("Apagar suas respostas deste navegador?")){ localStorage.removeItem(key()); load(); render(); } };
+$("#clr").onclick = () => { if(confirm("Apagar tuas respostas deste navegador?")){ localStorage.removeItem(key()); load(); render(); } };
 
 function csvCell(v){ v=String(v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 function dl(name, text){ const b=new Blob([text],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=name; a.click(); }
 function msg(s){ $("#msg").textContent=s; }
 
-// ---- CSV parse + kappa ----
+// ---- comparar ----
 function parseCSV(text){
   const rows=[]; let row=[], cur="", q=false;
   for(let i=0;i<text.length;i++){ const ch=text[i];
@@ -183,38 +198,45 @@ function parseCSV(text){
   return rows.filter(r=>r.length>1).map(r=>{ const o={}; head.forEach((h,j)=>o[h]=(r[j]||"").trim()); return o; });
 }
 let A=null,B=null;
-$("#fa").onchange = e => readf(e.target.files[0], d=>{A=d;tryKappa();});
-$("#fb").onchange = e => readf(e.target.files[0], d=>{B=d;tryKappa();});
+$("#fa").onchange = e => readf(e.target.files[0], d=>{A=d;tryCheck();});
+$("#fb").onchange = e => readf(e.target.files[0], d=>{B=d;tryCheck();});
 function readf(f,cb){ if(!f)return; const r=new FileReader(); r.onload=()=>cb(parseCSV(r.result)); r.readAsText(f,"utf-8"); }
 
-function cohen(pairs){ // pairs: [[a,b],...] valores 0/1/2
+function cohen(pairs){
   const n=pairs.length; if(!n) return {n:0};
   let agree=0; const ca={0:0,1:0,2:0}, cb={0:0,1:0,2:0};
   pairs.forEach(([a,b])=>{ if(a===b)agree++; ca[a]++; cb[b]++; });
   const po=agree/n; let pe=0; [0,1,2].forEach(k=>pe+=(ca[k]/n)*(cb[k]/n));
   const kappa = (1-pe)===0 ? (po===1?1:NaN) : (po-pe)/(1-pe);
-  return {n,po,pe,kappa};
+  return {n,agree,po,kappa};
 }
-function lab(k){ if(isNaN(k))return["n/a","#8a928a"]; if(k<.2)return["fraco","#b85b3b"]; if(k<.4)return["razoável","#b8863b"]; if(k<.6)return["moderado","#9a8a3b"]; if(k<.8)return["bom","#5f6f57"]; return["ótimo","#3f6f47"]; }
-function tryKappa(){
-  if(!A||!B){ return; }
+function verdito(k){ // veredito em linguagem de gente, calibrado pelo kappa por baixo dos panos
+  if(isNaN(k)) return ["deu pra medir pouco","#8a928a"];
+  if(k>=.8) return ["bateram quase sempre","#3f6f47"];
+  if(k>=.6) return ["bateram bem","#5f6f57"];
+  if(k>=.4) return ["bateram mais ou menos","#9a8a3b"];
+  if(k>=.2) return ["divergiram bastante","#b8863b"];
+  return ["divergiram muito","#b85b3b"];
+}
+function tryCheck(){
+  if(!A||!B) return;
   const mapB={}; B.forEach(r=>mapB[r.id]=r);
   const out=[];
-  EIXOS.forEach(([k,labn])=>{
-    const col=COL[k], pairs=[];
-    A.forEach(ra=>{ const rb=mapB[ra.id]; if(!rb)return;
-      const a=ra[col], b=rb[col];
-      if(a===""||b===""||a==null||b==null)return;
-      pairs.push([+a,+b]);
-    });
-    out.push([labn, cohen(pairs)]);
+  EIXOS.forEach(e=>{ const col=COL[e.k], pairs=[];
+    A.forEach(ra=>{ const rb=mapB[ra.id]; if(!rb)return; const a=ra[col],b=rb[col];
+      if(a===""||b===""||a==null||b==null)return; pairs.push([+a,+b]); });
+    out.push([e.t, cohen(pairs)]);
   });
-  let h='<table><tr><th>eixo</th><th>n pares</th><th>concordância</th><th>kappa</th><th></th></tr>';
-  out.forEach(([nm,r])=>{ if(!r.n){ h+='<tr><td>'+nm+'</td><td colspan=4 class="msg">sem pares pontuados</td></tr>'; return; }
-    const [txt,col]=lab(r.kappa);
-    h+='<tr><td><b>'+nm+'</b></td><td>'+r.n+'</td><td>'+(100*r.po).toFixed(0)+'%</td><td><b>'+(isNaN(r.kappa)?"n/a":r.kappa.toFixed(3))+'</b></td><td><span class="pill" style="background:'+col+'22;color:'+col+'">'+txt+'</span></td></tr>';
+  let h='<table><tr><th>pergunta</th><th>bateram em</th><th>resultado</th></tr>', tec='';
+  out.forEach(([nm,r])=>{
+    if(!r.n){ h+='<tr><td>'+nm+'</td><td colspan=2 class="msg">ninguém pontuou ainda</td></tr>'; return; }
+    const [txt,col]=verdito(r.kappa);
+    h+='<tr><td><b>'+nm+'</b></td><td>'+r.agree+' de '+r.n+' ('+(100*r.po).toFixed(0)+'%)</td><td><span class="pill" style="background:'+col+'22;color:'+col+'">'+txt+'</span></td></tr>';
+    tec+=nm+': kappa '+(isNaN(r.kappa)?"n/a":r.kappa.toFixed(3))+' · ';
   });
-  h+='</table><p class="msg" style="margin-top:10px">Kappa &lt; 0.4 num eixo = o guia precisa de exemplo melhor ali, ou os dois entenderam o eixo diferente. É pra isso que serve o piloto: ajustar o guia antes de anotar os 100-150.</p>';
+  h+='</table>';
+  h+='<p class="msg" style="margin-top:10px">Se numa pergunta vocês divergiram muito, não é culpa de vocês: é o sinal de que aquela pergunta está mal explicada. É pra isso que serve essa rodada: arrumar antes de valer.</p>';
+  h+='<details class="tec"><summary>ver o número técnico (pra quem curte)</summary><div class="body">'+tec.replace(/ · $/,'')+'<br>Esse número (kappa) é a concordância já descontando o acerto por sorte: perto de 1 é ótimo, perto de 0 quer dizer que bater foi sorte.</div></details>';
   $("#kres").innerHTML = h;
 }
 
