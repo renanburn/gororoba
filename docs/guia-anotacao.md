@@ -36,16 +36,24 @@ não quer dizer quem fez. Inclui gerundismo ("vou estar verificando").
 - Exemplo 0 (ausente): *"A gente reparou que dá pra melhorar isso."*
 
 ### 3. clichê-IA (`cliche_score`)
-Frase-feita de assistente, abertura de palestra, estrutura previsível. O som de IA
-sendo educada ou de blogueiro genérico.
+Frase-feita de assistente, abertura de palestra, estrutura previsível, **e apelo de
+propaganda/SEO**. O som de IA sendo educada, de blogueiro genérico, ou de anúncio.
 
-- Pega: "ótima pergunta", "com certeza", "fico feliz em ajudar", "no mundo de hoje",
-  "mais do que nunca", paralelismo negativo ("não é X, é Y"), regra dos três
-  decorativa, travessão usado como recurso de efeito.
-- Não pega: ênfase real, repetição de propósito, travessão gramatical correto em
-  aposto curto. O alvo é o clichê, não a pontuação em si.
-- Exemplo 2 (forte): *"Ótima pergunta! No mundo de hoje, mais do que nunca..."*
-- Exemplo 0 (ausente): *"Boa. A resposta curta é não."*
+- Pega (clichê de IA): "ótima pergunta", "com certeza", "fico feliz em ajudar", "no
+  mundo de hoje", "mais do que nunca", paralelismo negativo ("não é X, é Y"), regra
+  dos três decorativa, travessão usado como recurso de efeito.
+- Pega (hype de propaganda/SEO): "descubra agora", "dicas infalíveis", "a número 4 vai
+  te surpreender", "você veio ao lugar certo", "continue lendo", "transforme a sua",
+  "neste artigo", "o segredo que ninguém te conta". É outro sabor do mesmo eixo: frase
+  pronta que vende em vez de dizer (expandido após o piloto 1, que mostrou que o SEO
+  passava batido).
+- **Não pega gíria nem mineirês.** "brabo", "sô", "cê", "trem", "uai", fala falada e
+  regional NÃO são clichê de IA: pontue 0. Esse é o anteparo anti-viés, e o piloto 1
+  mostrou que ele vazava aqui (mineirês levou 1-2), então é a regra mais dura do eixo.
+- Não pega também: ênfase real, repetição de propósito, travessão gramatical correto em
+  aposto curto. O alvo é o clichê/hype, não a pontuação em si.
+- Exemplo 2 (forte): *"Ótima pergunta! No mundo de hoje, mais do que nunca..."* / *"Descubra agora as 7 dicas infalíveis: a número 4 vai te surpreender."*
+- Exemplo 0 (ausente): *"Boa. A resposta curta é não."* / *"Esse trem ficou brabo, sô. Liga o som e vê."*
 
 ## A escala (0 / 1 / 2 por eixo)
 

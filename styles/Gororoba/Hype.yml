@@ -1,0 +1,24 @@
+extends: existence
+message: "[cliche-ia] '%s': hype de SEO/propaganda. Vai pro conteúdo, corta o apelo."
+level: warning
+ignorecase: true
+tokens:
+  - 'você veio ao lugar certo'
+  - 'veio ao lugar certo'
+  - 'descubra agora'
+  - 'descubra como'
+  - 'dicas infalíveis'
+  - 'dica infalível'
+  - 'continue lendo'
+  - 'leia até o final'
+  - 'neste artigo'
+  - 'neste post'
+  - 'tudo o que você precisa saber'
+  - 'transforme a sua'
+  - 'transforme sua'
+  - 'o segredo que ninguém'
+  - 'guia definitivo'
+  - 'a número \d+'
+  - 'turbinar a sua'
+  - 'turbine a sua'
+  - 'você não está sozinho'

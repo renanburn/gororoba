@@ -76,8 +76,8 @@
     <p>Pra cada texto, três perguntas. Em cada uma você responde <b>Não</b>, <b>Um pouco</b> ou <b>Sim</b>. "Sim" é quando tem e pega o tom do texto; "Um pouco" é um caso isolado. Toca no <b>?</b> ao lado da pergunta pra ver exemplos a qualquer hora.</p>
     <div class="item"><b>1. Enrolação no começo.</b> Palavra que enfeita e não diz nada, jeito de redação de escola.<br><span class="ex">Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".</span></div>
     <div class="item"><b>2. Frase sem dono.</b> Ninguém aparece fazendo, soa a relatório frio.<br><span class="ex">Tipo: "foi feito", "pode-se observar", "foi realizado com sucesso", "vou estar enviando".</span></div>
-    <div class="item"><b>3. Cara de robô.</b> Frase pronta que toda IA solta, abertura de textão.<br><span class="ex">Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", e travessão usado de enfeite.</span></div>
-    <div class="ouro"><b>Regra de ouro:</b> pontua pelo que está no texto, não pelo sotaque. Gente que fala simples ou puxa pro mineirês não é robô. "Cê viu o trem, sô" é <b>Não</b> nas três.</div>
+    <div class="item"><b>3. Cara de robô.</b> Frase pronta de IA, abertura de textão, ou apelo de propaganda.<br><span class="ex">Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", "descubra agora", "a número 4 vai te surpreender", "você veio ao lugar certo".</span></div>
+    <div class="ouro"><b>Regra de ouro:</b> pontua pelo que está no texto, não pelo sotaque. Gente que fala simples ou puxa pro mineirês não é robô: "brabo", "sô", "cê", "trem", "uai" é <b>Não</b> nas três, sempre.</div>
   </div></details>
 </div>
 
@@ -108,7 +108,7 @@ const TRECHOS = [{"id": "p01", "trecho": "Esse método corta metade do retrabalh
 const EIXOS = [
   {k:"c", ask:"Tem enrolação pra começar frase?", t:"Enrolação no começo", x:'Palavra que enfeita e não diz nada, jeito de redação de escola. Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".'},
   {k:"v", ask:"As frases escondem quem fez?", t:"Frase sem dono", x:'Ninguém aparece fazendo, soa a relatório frio. Tipo: "foi feito", "pode-se observar", "foi realizado", "vou estar enviando".'},
-  {k:"l", ask:"Tem clichê, cara de IA?", t:"Cara de robô", x:'Frase pronta que toda IA solta. Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", e travessão de enfeite.'},
+  {k:"l", ask:"Tem clichê de IA ou frase de propaganda?", t:"Cara de robô", x:'Frase pronta de IA, abertura de textão, ou apelo de propaganda/SEO. Tipo: "ótima pergunta!", "no mundo de hoje", "não é X, é Y", travessão de enfeite, "descubra agora", "a número 4 vai te surpreender", "você veio ao lugar certo". NÃO conta gíria nem mineirês: "brabo", "sô", "cê", "trem", "uai" é Não.'},
 ];
 const VALS = ["Não","Um pouco","Sim"]; // índice = score 0/1/2 (Sim = tem, e forte)
 const COL = {c:"conectivo_score", v:"vozpassiva_score", l:"cliche_score"};
