@@ -5,7 +5,9 @@ cd "$(dirname "$0")/.."
 
 fail=0
 
-count() { vale --output=JSON "$1" 2>/dev/null | python3 -c 'import sys,json; d=json.load(sys.stdin); print(sum(len(v) for v in d.values()))'; }
+# Conta alertas de um arquivo. Algumas versões do Vale imprimem stdout vazio quando
+# o arquivo passa limpo, em vez de "{}"; tratamos vazio como zero alerta.
+count() { vale --output=JSON "$1" 2>/dev/null | python3 -c 'import sys,json; s=sys.stdin.read().strip(); d=json.loads(s) if s else {}; print(sum(len(v) for v in d.values()))'; }
 
 sujo=$(count tests/gororoba.md)
 limpo=$(count tests/voz-limpa.md)
