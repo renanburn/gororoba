@@ -13,9 +13,13 @@ com o julgamento humano.
   Kappa de Cohen na rodada final: conectivo 0,80, voz-passiva 1,00, clichê 0,81 (os três
   em "concordância quase perfeita"). Evidência crua e o histórico das três rodadas em
   `dataset/piloto/rodadas/`.
-- **Dataset de validação: 50 de ~120 trechos.** As três classes geradas (ia-sem-voz,
-  ia-bem-promptada, tradução) já estão na planilha-mãe, scores em branco. Faltam as três
-  classes humanas (voz, formal, regional), que dependem de coleta de fonte real.
+- **Dataset de validação: 96 de ~120 trechos**, scores em branco pra anotação humana.
+  - Geradas (50): 20 `ia-sem-voz`, 15 `traducao-automatica`, 15 `ia-bem-promptada`.
+  - Humanas reais, com fonte (46): 17 `humano-com-voz` e 13 `humano-formal-legitimo`
+    (ASSIN/NILC via Hugging Face + NURC/Recife), 16 `humano-simples-regional` (fala oral
+    transcrita do NURC/Recife, corpus acadêmico público). Toda linha registra a fonte.
+  - Pendente: o regional ainda é fala nordestina culta (NURC/Recife), falta o mineirês
+    popular de raiz (a fonte ideal, C-ORAL-BRASIL de BH, não abriu na coleta).
 
 Meta v0: 100 a 150 trechos, balanceados em 6 classes de origem. O `seo-generico` saiu da
 v0 (o piloto mostrou que, junto do clichê, derruba a concordância) e vira eixo próprio na
