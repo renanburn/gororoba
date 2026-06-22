@@ -1,0 +1,23 @@
+# Config do GitHub Pages. NÃO ativar o Pages enquanto o repo for privado:
+# Pages de repo privado exige plano pago. Instruções de ativação no fim do index.md.
+title: gororoba
+description: Linter de voz para português brasileiro. Aponta slop de IA por eixo. Não detecta autoria.
+theme: jekyll-theme-minimal
+lang: pt-BR
+show_downloads: false
+
+# Só o index.md vira página. O resto do repo não é servido como site.
+include:
+  - index.md
+exclude:
+  - styles
+  - tests
+  - scripts
+  - dataset
+  - deferred
+  - docs
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - CHANGELOG.md
+  - LICENSE
+  - README.md
