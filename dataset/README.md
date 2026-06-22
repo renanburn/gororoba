@@ -7,19 +7,24 @@ com o julgamento humano.
 
 ## Status
 
-**Em construção. Piloto validado, coleta em andamento.**
+**Coletado. Piloto validado, pronto pra anotação em escala.**
 
 - **Piloto: passou.** Renan + Lírios calibraram a régua dos três eixos em 15 trechos.
   Kappa de Cohen na rodada final: conectivo 0,80, voz-passiva 1,00, clichê 0,81 (os três
   em "concordância quase perfeita"). Evidência crua e o histórico das três rodadas em
   `dataset/piloto/rodadas/`.
-- **Dataset de validação: 96 de ~120 trechos**, scores em branco pra anotação humana.
+- **Dataset de validação: 113 trechos coletados**, scores em branco pra anotação humana.
+  Toda linha registra a fonte; nada inventado.
   - Geradas (50): 20 `ia-sem-voz`, 15 `traducao-automatica`, 15 `ia-bem-promptada`.
-  - Humanas reais, com fonte (46): 17 `humano-com-voz` e 13 `humano-formal-legitimo`
-    (ASSIN/NILC via Hugging Face + NURC/Recife), 16 `humano-simples-regional` (fala oral
-    transcrita do NURC/Recife, corpus acadêmico público). Toda linha registra a fonte.
-  - Pendente: o regional ainda é fala nordestina culta (NURC/Recife), falta o mineirês
-    popular de raiz (a fonte ideal, C-ORAL-BRASIL de BH, não abriu na coleta).
+  - Humanas reais (63): 21 `humano-com-voz`, 16 `humano-formal-legitimo`, 26
+    `humano-simples-regional`. Fontes: ASSIN/NILC e CORAA v1.1 (que reúne C-ORAL-BRASIL,
+    SP2010, ALIP) via Hugging Face, e NURC/Recife (PDF público da UFAL).
+  - O regional cobre quatro pontos reais: Recife, Minas Gerais, São Paulo capital e São
+    Paulo interior. Falta sul, centro-oeste e norte (as transcrições só apareceram em
+    PDF-imagem ou fonte fechada); expansão geográfica fica pra v0.1.
+  - Nota de balanço: hoje pende pro não-slop (78 não-slop x 35 slop), de propósito, já
+    que o anteparo anti-viés é o ponto que mais precisa de cobertura. Dá pra gerar mais
+    slop se a anotação pedir equilíbrio.
 
 Meta v0: 100 a 150 trechos, balanceados em 6 classes de origem. O `seo-generico` saiu da
 v0 (o piloto mostrou que, junto do clichê, derruba a concordância) e vira eixo próprio na
