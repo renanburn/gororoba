@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Como contribuir
+    url: https://github.com/renanburn/gororoba/blob/main/CONTRIBUTING.md
+    about: A regra dura (fixture + anti-fixture), como rodar o Vale e como ajudar no dataset.

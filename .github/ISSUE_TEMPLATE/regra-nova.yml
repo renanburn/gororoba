@@ -1,0 +1,56 @@
+name: Regra nova
+description: Proponho um novo padrão de slop pro linter pegar.
+title: "[regra-nova] "
+labels: ["regra-nova"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de abrir o PR, descreve aqui o padrão. A regra dura vale no PR: regra nova
+        entra com fixture (caso que deve pegar) e anti-fixture (caso parecido que NÃO
+        pode pegar). Já vai pensando nos dois.
+  - type: textarea
+    id: padrao
+    attributes:
+      label: O padrão de slop
+      description: Qual o tell. Como ele aparece no texto.
+      placeholder: "Frase de abertura que não entrega informação, tipo 'antes de tudo, é preciso entender que'."
+    validations:
+      required: true
+  - type: dropdown
+    id: eixo
+    attributes:
+      label: Em qual eixo cai
+      options:
+        - conectivo-traducao
+        - voz-passiva
+        - cliche-ia
+        - Não sei (ajuda a decidir)
+    validations:
+      required: true
+  - type: textarea
+    id: fixture
+    attributes:
+      label: fixture (o caso que a regra DEVE pegar)
+      placeholder: "Antes de tudo, é preciso entender que o mercado mudou."
+    validations:
+      required: true
+  - type: textarea
+    id: antifixture
+    attributes:
+      label: anti-fixture (o caso parecido que NÃO pode pegar)
+      description: Voz legítima que se parece com o slop, pra provar que a regra não vaza.
+      placeholder: "Antes de sair, tranca a porta."
+    validations:
+      required: true
+  - type: dropdown
+    id: severidade
+    attributes:
+      label: Severidade sugerida
+      description: "error: clichê de IA sem defesa. warning: quase sempre slop, com exceção. suggestion: depende de contexto."
+      options:
+        - suggestion
+        - warning
+        - error
+    validations:
+      required: true

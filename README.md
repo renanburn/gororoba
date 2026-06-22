@@ -62,6 +62,17 @@ anotado por dois humanos com concordância (kappa) medida, ainda está em constr
 ela, isto é uma régua útil; com ela, vira uma régua provada. Não vou chamar de
 "benchmark" antes de ter o kappa na mão.
 
+## Para o cético
+
+Abre o capô. O [posicionamento](docs/POSICIONAMENTO.md) responde de frente "isso é só
+regex?", "e os falsos positivos?", "pega fala popular?" e "por que confiar sem o kappa?".
+
+## Contribuir
+
+Um linter melhora em conjunto. O [guia de contribuição](CONTRIBUTING.md) traz a regra
+dura: regra nova entra com fixture (caso que deve pegar) e anti-fixture (caso que NÃO
+pode pegar). Tem template de issue pra falso-positivo e pra regra nova.
+
 ## Crédito
 
 Vem da minha régua anti-slop, que eu já mantinha antes, e do

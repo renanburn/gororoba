@@ -1,0 +1,46 @@
+name: Falso-positivo
+description: O linter marcou voz legítima como slop (mineirês, fala popular, formal correto).
+title: "[falso-positivo] "
+labels: ["falso-positivo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esse é o bug mais grave que o projeto pode ter. O linter atropelar voz legítima
+        é a morte da ferramenta. Quanto mais exato o trecho, mais rápido vira
+        anti-fixture e para de vazar.
+  - type: textarea
+    id: trecho
+    attributes:
+      label: O trecho que foi marcado
+      description: Cola o texto exato que o linter acusou e que era voz legítima.
+      placeholder: "Cê viu o trem que o sô falou, uai?"
+    validations:
+      required: true
+  - type: input
+    id: regra
+    attributes:
+      label: Qual regra disparou
+      description: "Roda `vale --output=line teu-arquivo.md` e cola o nome da regra (ex: Gororoba.Aberturas)."
+      placeholder: "Gororoba.Cliches"
+    validations:
+      required: true
+  - type: dropdown
+    id: registro
+    attributes:
+      label: Que tipo de voz é
+      options:
+        - Mineirês ou regional
+        - Fala popular ou falada
+        - Formal legítimo (jurídico, técnico)
+        - Gíria atual
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que isto é voz legítima, não slop
+      description: Uma ou duas frases. Por que o trecho não deveria ter alerta.
+    validations:
+      required: true

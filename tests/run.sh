@@ -9,15 +9,21 @@ count() { vale --output=JSON "$1" 2>/dev/null | python3 -c 'import sys,json; d=j
 
 sujo=$(count tests/gororoba.md)
 limpo=$(count tests/voz-limpa.md)
-readme=$(count README.md)
 
 echo "tests/gororoba.md  -> $sujo alertas (espera > 0)"
 echo "tests/voz-limpa.md -> $limpo alertas (espera 0)"
-echo "README.md          -> $readme alertas (espera 0, passa na própria régua)"
 
 [ "$sujo" -gt 0 ]  || { echo "FALHA: gororoba.md devia acusar"; fail=1; }
 [ "$limpo" -eq 0 ] || { echo "FALHA: voz-limpa.md devia passar limpo (anteparo anti-viés)"; fail=1; }
-[ "$readme" -eq 0 ] || { echo "FALHA: README.md devia passar na própria régua"; fail=1; }
+
+# Docs de prosa que dizem passar na própria régua. Cada um tem que ter zero alerta.
+# (guia-anotacao.md e plano-coleta.md ficam de fora: citam tells dentro de exemplos
+#  de propósito, como o fixture sujo.)
+for doc in README.md index.md CONTRIBUTING.md CODE_OF_CONDUCT.md docs/POSICIONAMENTO.md; do
+  n=$(count "$doc")
+  echo "$doc -> $n alertas (espera 0, passa na própria régua)"
+  [ "$n" -eq 0 ] || { echo "FALHA: $doc devia passar na própria régua"; fail=1; }
+done
 
 [ "$fail" -eq 0 ] && echo "OK: ruleset validado." || echo "ruleset com falha."
 exit $fail
