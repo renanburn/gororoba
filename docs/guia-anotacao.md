@@ -20,6 +20,11 @@ vertido do inglês ou de IA que precisa de transição antes de dizer qualquer c
   "outrossim", "sendo assim", "dessa forma", "diante do exposto", "com efeito".
 - Não pega: conectivo que carrega sentido real ("porque", "mas", "então" numa fala
   viva). Conjunção comum não é gororoba.
+- Fronteira com o clichê (decidida na rodada-piloto Renan+Lírios, 2026-06-22): este
+  eixo é só o conectivo de redação formal. Bordão de conversa traduzido do inglês ("no
+  fim do dia", "deixa eu ser honesto", "a milha extra", "um dia de cada vez") NÃO entra
+  aqui, cai no clichê-IA (eixo 3). Sem essa regra os dois anotadores dividiam: ambos
+  viam o slop, mas um marcava conectivo e o outro clichê, e o conectivo despencava.
 - Exemplo 2 (forte): *"Vale ressaltar que, nesse sentido, é importante destacar..."*
 - Exemplo 0 (ausente): *"O show atrasou porque choveu."*
 

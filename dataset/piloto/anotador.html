@@ -94,6 +94,7 @@
     <div class="item"><b>"Esse trem ficou brabo, sô. Liga o som e vê."</b><br><span class="ex"><b>Não</b> nas três. Mineirês e fala de gente não é robô, nunca. Esse é o teste do anti-robô.</span></div>
     <div class="item"><b>"A inovação tem um papel cada vez mais relevante no cenário atual. Diante disso, investir é essencial de maneira expressiva."</b><br><span class="ex">Enrolação: <b>Sim</b> ("diante disso") · Frase sem dono: Não · Cara de robô: <b>Sim</b> ("no cenário atual", "de maneira expressiva", textão que enche linguiça e não diz nada). Esse é o slop que a régua persegue, mesmo sem nenhuma gíria.</span></div>
     <div class="item"><b>"Ficou doido, bicho. Manda ver que tá no ponto."</b><br><span class="ex"><b>Não</b> nas três. Gíria e empolgação de gente de verdade não é cara de robô. Bateu dúvida se gíria é robô? É Não.</span></div>
+    <div class="item"><b>"No fim do dia, é tudo sobre paixão. A gente vai a milha extra todo dia."</b><br><span class="ex">Enrolação: <b>Não</b> (não tem conectivo de redação) · Frase sem dono: Não · Cara de robô: <b>Sim</b> ("no fim do dia", "a milha extra" são bordões traduzidos do inglês). Slop de conversa cai aqui, na pergunta 3, não na 1.</span></div>
   </div></details>
 </div>
 
@@ -138,9 +139,9 @@ const TRECHOS = [
   {"id": "t15", "trecho": "Cortei o refrão na terceira repetição porque cansava. Ficou oito segundos mais curto e o clipe respira melhor."}
 ];
 const EIXOS = [
-  {k:"c", ask:"Tem enrolação pra começar frase?", t:"Enrolação no começo", x:'Palavra que enfeita e não diz nada, jeito de redação de escola. Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".'},
+  {k:"c", ask:"Tem enrolação pra começar frase?", t:"Enrolação no começo", x:'Conectivo de redação formal que enfeita e não diz nada. Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma", "diante disso". SÓ esses, os de redação. Bordão de conversa traduzido tipo "no fim do dia", "deixa eu ser honesto", "olha só" NÃO entra aqui, isso é cara de robô (pergunta 3).'},
   {k:"v", ask:"As frases escondem quem fez?", t:"Frase sem dono", x:'Ninguém aparece fazendo, soa a relatório frio. Tipo: "foi feito", "pode-se observar", "foi realizado", "vou estar enviando".'},
-  {k:"l", ask:"Tem clichê, cara de IA?", t:"Cara de robô", x:'Frase pronta que toda IA solta, abertura de textão. Tipo: "ótima pergunta!", "com certeza!", "no mundo de hoje", "mais do que nunca", "não é X, é Y", travessão usado de enfeite. ATENÇÃO, o que NÃO é cara de robô: gíria e mineirês. "brabo", "sô", "cê", "trem", "uai", "bora" é sempre Não. Fala de gente de verdade, mesmo torta ou simples, é Não.'},
+  {k:"l", ask:"Tem clichê, cara de IA?", t:"Cara de robô", x:'Frase pronta que toda IA solta, abertura de textão, e bordão de conversa traduzido do inglês. Tipo: "ótima pergunta!", "com certeza!", "no mundo de hoje", "mais do que nunca", "não é X, é Y", "no fim do dia", "a milha extra", "deixa eu ser honesto", "um dia de cada vez", travessão usado de enfeite. ATENÇÃO, o que NÃO é cara de robô: gíria e mineirês. "brabo", "sô", "cê", "trem", "uai", "bora" é sempre Não. Fala de gente de verdade, mesmo torta ou simples, é Não.'},
 ];
 const VALS = ["Não","Um pouco","Sim"]; // índice = score 0/1/2 (Sim = tem, e forte)
 const COL = {c:"conectivo_score", v:"vozpassiva_score", l:"cliche_score"};
