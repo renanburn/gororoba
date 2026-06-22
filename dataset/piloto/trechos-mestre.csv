@@ -1,16 +1,16 @@
 id,trecho,fonte,classe_origem
-p01,Esse método corta metade do retrabalho. Testei em 3 projetos.,papo-reto/exemplos.md (depois #6),humano-com-voz
-p02,Quem não aparece online hoje perde cliente pra quem aparece. Simples assim.,papo-reto/exemplos.md (depois #1),humano-com-voz
-p03,"Esse trem ficou brabo, sô. Liga o som e vê.",papo-reto/exemplos.md (depois #4),humano-simples-regional
-p04,"Esse trem aqui é bom dimais, sô. Cê vai gostar.",papo-reto/exemplos.md (depois #10),humano-simples-regional
-p05,"O CONTRATANTE pagará ao CONTRATADO o valor mensal de R$ 18.700,00, em até cinco dias úteis após a emissão da nota fiscal correspondente.",registro contratual (composto),humano-formal-legitimo
-p06,A autenticação usa NextAuth com JWT. O backend revalida o papel do usuário a cada request e não confia no token enviado pelo cliente.,registro técnico (composto),humano-formal-legitimo
-p07,"É importante ressaltar que a gestão eficiente de projetos é fundamental para o sucesso de qualquer organização. Nesse sentido, adotar boas práticas pode potencializar os resultados de forma significativa.","gerado (gororoba pilot, slop genérico)",ia-sem-voz
-p08,"A tecnologia tem desempenhado um papel cada vez mais relevante no cenário atual. Diante disso, empresas que investem em inovação tendem a se destacar no mercado de maneira expressiva.","gerado (gororoba pilot, slop genérico)",ia-sem-voz
-p09,"Vale destacar que a comunicação é a base de qualquer relacionamento saudável. Dessa forma, torna-se essencial cultivar o diálogo de maneira contínua e transparente.","gerado (gororoba pilot, slop genérico)",ia-sem-voz
-p10,"No final do dia, trata-se de entregar valor. Nós acreditamos que cada cliente merece o melhor, e é por isso que vamos a milha extra todos os dias.","gerado (gororoba pilot, translationese EN->PT)",traducao-automatica
-p11,"Deixe-me ser claro: isto não é sobre dinheiro. Isto é sobre fazer a diferença na vida das pessoas, uma pessoa de cada vez.","gerado (gororoba pilot, translationese EN->PT)",traducao-automatica
-p12,Cortei a cena em 12 segundos porque o ritmo caía depois disso. Testei com 18 e com 9; 12 foi onde a piada respirava sem arrastar.,"gerado (gororoba pilot, IA bem-promptada)",ia-bem-promptada
-p13,"O show começa sete da noite. Quem chega depois das seis não pega estacionamento, então combina a carona antes.","gerado (gororoba pilot, IA bem-promptada)",ia-bem-promptada
-p14,"Tá rindo de quê, sô? Pega a câmera e bora, que a luz já tá indo embora.",fala regional (composta),humano-simples-regional
-p15,"Cê marca o ensaio pra terça? Quarta eu ainda tô em BH, não dá não.",fala regional (composta),humano-simples-regional
+t01,"Regravei o refrão três vezes. A terceira saiu torta, mas é a única com verdade. Fica essa.",fala de produção (composta),humano-com-voz
+t02,"Vale ressaltar que o planejamento é essencial para qualquer projeto de sucesso. Nesse sentido, definir metas claras potencializa os resultados de forma significativa.","gerado (slop genérico, conectivo)",ia-sem-voz
+t03,"Cê viu como ficou a mistura? Ficou doido, bicho. Manda lá pro pessoal ouvir.",fala regional mineira (composta),humano-simples-regional
+t04,"No fim do dia, é tudo sobre paixão. A gente vai a milha extra todo dia, porque você merece nada menos que o melhor.","gerado (translationese EN->PT)",traducao-automatica
+t05,"O servidor guarda a sessão num cookie assinado. A cada requisição, o sistema confere o usuário no banco antes de liberar a ação.",registro técnico voz ativa (composto),humano-formal-legitimo
+t06,"A van pega a equipe às seis no estúdio. Quem mora pra zona sul espera no ponto da praça, que fica no caminho.","gerado (IA bem-promptada, concreto)",ia-bem-promptada
+t07,"Rapá, esse arranjo ficou massa demais. Bora fechar logo, que já tá no ponto.",fala regional nordestina (composta),humano-simples-regional
+t08,"A inovação tem desempenhado um papel cada vez mais relevante no cenário atual. Diante disso, empresas que investem em tecnologia tendem a se destacar de maneira expressiva.","gerado (slop genérico, conectivo)",ia-sem-voz
+t09,"Cobro mais de quem chega em cima da hora. Pressa é problema de quem não se planejou, não meu.",opinião com voz (composta),humano-com-voz
+t10,"Uai, o ensaio não era amanhã? Achei que tinha trocado, sô. Me liga aí.",fala regional mineira (composta),humano-simples-regional
+t11,"Deixa eu ser honesto com você: isto não é só um trabalho. É um chamado, construído um dia de cada vez.","gerado (translationese EN->PT)",traducao-automatica
+t12,"O cliente paga em duas parcelas: metade na assinatura do contrato, metade na entrega dos arquivos finais.",registro contratual voz ativa (composto),humano-formal-legitimo
+t13,"É importante destacar que a comunicação assertiva é a chave para o sucesso. Dessa forma, investir no diálogo torna-se indispensável para qualquer equipe.","gerado (slop genérico, conectivo)",ia-sem-voz
+t14,"Mermão, esse grave ficou sinistro. Bota de novo que eu quero ouvir mais alto.",fala regional carioca (composta),humano-simples-regional
+t15,"Cortei o refrão na terceira repetição porque cansava. Ficou oito segundos mais curto e o clipe respira melhor.","gerado (IA bem-promptada, concreto)",ia-bem-promptada

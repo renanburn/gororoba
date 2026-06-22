@@ -118,7 +118,23 @@
 </div></div>
 
 <script>
-const TRECHOS = [{"id": "p01", "trecho": "Esse método corta metade do retrabalho. Testei em 3 projetos."}, {"id": "p02", "trecho": "Quem não aparece online hoje perde cliente pra quem aparece. Simples assim."}, {"id": "p03", "trecho": "Esse trem ficou brabo, sô. Liga o som e vê."}, {"id": "p04", "trecho": "Esse trem aqui é bom dimais, sô. Cê vai gostar."}, {"id": "p05", "trecho": "O CONTRATANTE pagará ao CONTRATADO o valor mensal de R$ 18.700,00, em até cinco dias úteis após a emissão da nota fiscal correspondente."}, {"id": "p06", "trecho": "A autenticação usa NextAuth com JWT. O backend revalida o papel do usuário a cada request e não confia no token enviado pelo cliente."}, {"id": "p07", "trecho": "É importante ressaltar que a gestão eficiente de projetos é fundamental para o sucesso de qualquer organização. Nesse sentido, adotar boas práticas pode potencializar os resultados de forma significativa."}, {"id": "p08", "trecho": "A tecnologia tem desempenhado um papel cada vez mais relevante no cenário atual. Diante disso, empresas que investem em inovação tendem a se destacar no mercado de maneira expressiva."}, {"id": "p09", "trecho": "Vale destacar que a comunicação é a base de qualquer relacionamento saudável. Dessa forma, torna-se essencial cultivar o diálogo de maneira contínua e transparente."}, {"id": "p10", "trecho": "No final do dia, trata-se de entregar valor. Nós acreditamos que cada cliente merece o melhor, e é por isso que vamos a milha extra todos os dias."}, {"id": "p11", "trecho": "Deixe-me ser claro: isto não é sobre dinheiro. Isto é sobre fazer a diferença na vida das pessoas, uma pessoa de cada vez."}, {"id": "p12", "trecho": "Cortei a cena em 12 segundos porque o ritmo caía depois disso. Testei com 18 e com 9; 12 foi onde a piada respirava sem arrastar."}, {"id": "p13", "trecho": "O show começa sete da noite. Quem chega depois das seis não pega estacionamento, então combina a carona antes."}, {"id": "p14", "trecho": "Tá rindo de quê, sô? Pega a câmera e bora, que a luz já tá indo embora."}, {"id": "p15", "trecho": "Cê marca o ensaio pra terça? Quarta eu ainda tô em BH, não dá não."}];
+const TRECHOS = [
+  {"id": "t01", "trecho": "Regravei o refrão três vezes. A terceira saiu torta, mas é a única com verdade. Fica essa."},
+  {"id": "t02", "trecho": "Vale ressaltar que o planejamento é essencial para qualquer projeto de sucesso. Nesse sentido, definir metas claras potencializa os resultados de forma significativa."},
+  {"id": "t03", "trecho": "Cê viu como ficou a mistura? Ficou doido, bicho. Manda lá pro pessoal ouvir."},
+  {"id": "t04", "trecho": "No fim do dia, é tudo sobre paixão. A gente vai a milha extra todo dia, porque você merece nada menos que o melhor."},
+  {"id": "t05", "trecho": "O servidor guarda a sessão num cookie assinado. A cada requisição, o sistema confere o usuário no banco antes de liberar a ação."},
+  {"id": "t06", "trecho": "A van pega a equipe às seis no estúdio. Quem mora pra zona sul espera no ponto da praça, que fica no caminho."},
+  {"id": "t07", "trecho": "Rapá, esse arranjo ficou massa demais. Bora fechar logo, que já tá no ponto."},
+  {"id": "t08", "trecho": "A inovação tem desempenhado um papel cada vez mais relevante no cenário atual. Diante disso, empresas que investem em tecnologia tendem a se destacar de maneira expressiva."},
+  {"id": "t09", "trecho": "Cobro mais de quem chega em cima da hora. Pressa é problema de quem não se planejou, não meu."},
+  {"id": "t10", "trecho": "Uai, o ensaio não era amanhã? Achei que tinha trocado, sô. Me liga aí."},
+  {"id": "t11", "trecho": "Deixa eu ser honesto com você: isto não é só um trabalho. É um chamado, construído um dia de cada vez."},
+  {"id": "t12", "trecho": "O cliente paga em duas parcelas: metade na assinatura do contrato, metade na entrega dos arquivos finais."},
+  {"id": "t13", "trecho": "É importante destacar que a comunicação assertiva é a chave para o sucesso. Dessa forma, investir no diálogo torna-se indispensável para qualquer equipe."},
+  {"id": "t14", "trecho": "Mermão, esse grave ficou sinistro. Bota de novo que eu quero ouvir mais alto."},
+  {"id": "t15", "trecho": "Cortei o refrão na terceira repetição porque cansava. Ficou oito segundos mais curto e o clipe respira melhor."}
+];
 const EIXOS = [
   {k:"c", ask:"Tem enrolação pra começar frase?", t:"Enrolação no começo", x:'Palavra que enfeita e não diz nada, jeito de redação de escola. Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".'},
   {k:"v", ask:"As frases escondem quem fez?", t:"Frase sem dono", x:'Ninguém aparece fazendo, soa a relatório frio. Tipo: "foi feito", "pode-se observar", "foi realizado", "vou estar enviando".'},
@@ -129,7 +145,7 @@ const COL = {c:"conectivo_score", v:"vozpassiva_score", l:"cliche_score"};
 const $ = s => document.querySelector(s);
 let who = "", state = {};
 
-function key(){ return "gororoba-piloto3:" + (who||"_"); }
+function key(){ return "gororoba-piloto-lirios:" + (who||"_"); }
 function load(){ try{ state = JSON.parse(localStorage.getItem(key())) || {}; }catch(e){ state={}; } }
 function save(){ localStorage.setItem(key(), JSON.stringify(state)); }
 
