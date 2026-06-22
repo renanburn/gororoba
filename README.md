@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.png" alt="Um prato de macarrão embolado e requentado virando um prato bem servido" width="680">
+  <img src="assets/hero.png" alt="Uma feijoada verde e estragada virando uma feijoada bonita e apetitosa, em pixel art" width="820">
 </p>
 
 <h1 align="center">gororoba</h1>
@@ -22,6 +22,31 @@
 Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por trecho. Aí você tempera e serve melhor. Não dá nota, não acusa ninguém: aponta o ponto exato e o porquê, pra você decidir.
 
 **Não detecta autoria de IA.** Ela diz "isto tem 3 conectivos de tradução e 2 de voz passiva", não "isto foi escrito por máquina".
+
+## Veja rodando
+
+<p align="center">
+  <img src="assets/demo.gif" alt="No terminal, o gororoba aponta os trechos requentados de um texto e a fala brasileira passa limpa" width="760">
+</p>
+
+## Antes e depois
+
+O mesmo recado, primeiro requentado, depois temperado. Entra gororoba:
+
+```text
+Vale ressaltar que a reunião foi produtiva. Nesse sentido, foi observado um
+avanço. Ótima pergunta sobre os próximos passos.
+```
+
+Sai com voz:
+
+```text
+A reunião rendeu. A gente avançou no período. Boa pergunta: vamos aos próximos
+passos.
+```
+
+O gororoba acende os quatro tells (dois conectivos de tradução, uma voz passiva, um
+clichê de abertura). Você corta e serve melhor.
 
 ## O que é, e o que não é
 
