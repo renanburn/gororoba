@@ -1,11 +1,27 @@
-# gororoba
+<p align="center">
+  <img src="assets/hero.png" alt="Um prato de macarrão embolado e requentado virando um prato bem servido" width="680">
+</p>
 
-Linter de voz para português brasileiro. Aponta trechos de *slop* de IA (texto
-genérico, requentado, traduzido do inglês, sem voz) por eixo, igual o ESLint aponta
-código. **Não detecta autoria de IA.** Diz "isto tem 3 conectivos de tradução e 2 voz
-passiva", não "isto foi escrito por máquina".
+<h1 align="center">gororoba</h1>
 
-[![Vale](https://github.com/renanburn/gororoba/actions/workflows/vale.yml/badge.svg)](https://github.com/renanburn/gororoba/actions/workflows/vale.yml)
+<p align="center">
+  Linter de voz pro português brasileiro. Aponta onde teu texto virou gororoba, igual o ESLint aponta erro no código.
+</p>
+
+<p align="center">
+  <a href="https://github.com/renanburn/gororoba/actions/workflows/vale.yml"><img src="https://github.com/renanburn/gororoba/actions/workflows/vale.yml/badge.svg" alt="CI Vale"></a>
+  <img src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue" alt="Licença MIT">
+  <img src="https://img.shields.io/badge/voz-pt--BR-009c3b" alt="pt-BR">
+  <img src="https://img.shields.io/badge/roda%20sobre-Vale-f9a825" alt="Roda sobre o Vale">
+</p>
+
+---
+
+**gororoba** é gíria pra comida feita sem cuidado: sobra requentada, mistura sem gosto, rango que ninguém quer no prato. É o nome certo pro texto que ninguém quer ler: genérico, requentado, traduzido no muque, sem tempero.
+
+Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por trecho. Aí você tempera e serve melhor. Não dá nota, não acusa ninguém: aponta o ponto exato e o porquê, pra você decidir.
+
+**Não detecta autoria de IA.** Ela diz "isto tem 3 conectivos de tradução e 2 de voz passiva", não "isto foi escrito por máquina".
 
 ## O que é, e o que não é
 
@@ -48,8 +64,8 @@ concordância entre anotadores. A v0 fica nos 3 eixos objetivos.
 
 O viés que derrubou os detectores foi penalizar voz simples. gororoba corre o risco
 oposto: marcar mineirês ou fala popular como slop. Isso seria a morte da ferramenta.
-O fixture `tests/voz-limpa.md` existe pra travar isso: "Cê viu o trem que o sô falou,
-uai" passa limpo, sem um alerta. Roda e confere:
+O fixture `tests/voz-limpa.md` existe pra travar isso: "Cê viu esse trem? Tá doido."
+passa limpo, sem um alerta, junto com fala de treze cantos do Brasil. Roda e confere:
 
 ```bash
 vale tests/voz-limpa.md
@@ -71,7 +87,8 @@ regex?", "e os falsos positivos?", "pega fala popular?" e "por que confiar sem o
 
 Um linter melhora em conjunto. O [guia de contribuição](CONTRIBUTING.md) traz a regra
 dura: regra nova entra com fixture (caso que deve pegar) e anti-fixture (caso que NÃO
-pode pegar). Tem template de issue pra falso-positivo e pra regra nova.
+pode pegar). Tem template de issue pra falso-positivo e pra regra nova. Sabe falar de um
+canto do Brasil que ainda não está no teste? Esse é o melhor primeiro PR daqui.
 
 ## Crédito
 
@@ -85,4 +102,17 @@ limpa.
 
 MIT. Ver [LICENSE](LICENSE).
 
-Este README passou na própria régua. Roda `vale README.md` e confere.
+---
+
+<p align="center">
+  <a href="https://instagram.com/renan1rg"><img src="https://img.shields.io/badge/Instagram-@renan1rg-E4405F?logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://1rg.com.br"><img src="https://img.shields.io/badge/site-1rg.com.br-111111" alt="Site"></a>
+</p>
+
+<p align="center">
+  Mantido por Renan Guaceroni. O gororoba nasceu da régua de voz que uso no TomOS, meu sistema pessoal de IA. Esta é a parte que dá pra você levar pra casa.
+</p>
+
+<p align="center">
+  <sub>Este README passou na própria régua. Roda <code>vale README.md</code> e confere.</sub>
+</p>
