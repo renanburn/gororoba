@@ -2,25 +2,28 @@
 Output assets/demo.gif
 
 Set Shell "bash"
-Set FontSize 20
-Set Width 1080
-Set Height 640
-Set Padding 28
+Set FontSize 22
+Set Width 1100
+Set Height 700
+Set Padding 30
 Set Theme "Catppuccin Mocha"
-Set TypingSpeed 55ms
+Set TypingSpeed 50ms
 
 Hide
-Type "export PATH=/opt/homebrew/bin:$PATH; clear" Enter
+Type "export PATH=/opt/homebrew/bin:$PATH; cd assets; clear" Enter
 Show
 Sleep 700ms
 
-Type "cat assets/demo.md" Enter
-Sleep 1.6s
-
-Type "vale assets/demo.md" Enter
+Type "# o mesmo recado, requentado:" Enter
+Sleep 500ms
+Type "cat requentado.md" Enter
+Sleep 1.8s
+Type "vale requentado.md" Enter
 Sleep 3s
 
-Type "# agora, fala brasileira de verdade:" Enter
+Type "# agora, temperado:" Enter
 Sleep 500ms
-Type "vale tests/voz-limpa.md" Enter
+Type "cat temperado.md" Enter
+Sleep 1.6s
+Type "vale temperado.md" Enter
 Sleep 3s
