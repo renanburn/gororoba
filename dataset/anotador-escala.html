@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gororoba · anotação do dataset</title>
+<style>
+  :root{--paper:#f4f1ec;--fg:#1a1f1a;--fg2:#5a625a;--fg3:#8a928a;--line:#dcdacf;--algae:#5f6f57;--algae-hi:#7a8a77;--amber:#b8863b;--card:#fbfaf6}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  header{position:sticky;top:0;z-index:10;background:rgba(244,241,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  h1{font-size:20px;margin:0 0 3px;font-weight:600}
+  h1 .g{color:var(--algae)}
+  .sub{font-size:13.5px;color:var(--fg2);margin:0;max-width:620px}
+  .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .who{margin-top:12px}
+  .who input{font:14px/1 inherit;padding:9px 11px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--fg);min-width:180px}
+  .prog{font-size:12.5px;color:var(--fg2);margin-left:auto}
+  .bar{height:4px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:8px}
+  .bar > i{display:block;height:100%;background:var(--algae);width:0;transition:width .25s}
+  details.leg{margin:16px 0;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+  details.leg summary{cursor:pointer;padding:13px 16px;font-size:14px;font-weight:600;color:var(--algae)}
+  .leg .body{padding:0 16px 16px;font-size:14px;color:var(--fg2)}
+  .leg .item{padding:9px 0;border-top:1px solid var(--line)}
+  .leg .item b{color:var(--fg)}
+  .leg .ex{color:var(--fg3);font-size:13px}
+  .leg .ouro{margin-top:12px;padding:11px 13px;background:rgba(95,111,87,.08);border-radius:7px;font-size:13.5px;color:var(--fg)}
+  main{padding:8px 0 40px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:18px;margin:14px 0}
+  .card.done{border-color:var(--algae-hi);box-shadow:0 0 0 1px var(--algae-hi) inset}
+  .card .n{font-size:11px;color:var(--fg3);letter-spacing:.12em;text-transform:uppercase}
+  .trecho{font-size:18px;line-height:1.55;margin:8px 0 18px}
+  .q{margin:14px 0}
+  .q .ask{font-size:14.5px;color:var(--fg);margin-bottom:7px;display:flex;align-items:center;gap:8px}
+  .qi{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid var(--algae-hi);color:var(--algae);font-size:12px;font-weight:700;cursor:pointer;flex:none}
+  .btns{display:flex;gap:8px;flex-wrap:wrap}
+  .btns button{padding:9px 16px;border:1px solid var(--line);background:#fff;border-radius:8px;font:600 14px/1 inherit;color:var(--fg2);cursor:pointer}
+  .btns button.sel{background:var(--algae);border-color:var(--algae);color:#fff}
+  .notas{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:6px;padding:8px;font:13px/1.4 inherit;background:#fff;color:var(--fg);resize:vertical;min-height:30px}
+  footer{position:sticky;bottom:0;background:rgba(244,241,236,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 0}
+  button.act{background:var(--algae);color:#fff;border:none;border-radius:7px;padding:12px 18px;font:600 14px/1 inherit;cursor:pointer}
+  button.ghost{background:transparent;border:1px solid var(--line);color:var(--fg2);border-radius:7px;padding:12px 14px;font:13px/1 inherit;cursor:pointer}
+  .msg{font-size:12.5px;color:var(--fg2)}
+  .check{margin:34px 0;border:1px solid var(--line);border-radius:11px;background:var(--card);padding:18px}
+  .check h2{font-size:16px;margin:0 0 4px}
+  .check table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+  .check th,.check td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+  .check th{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--fg3)}
+  .pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:700}
+  .file{font-size:13.5px;margin:7px 0}
+  details.tec summary{cursor:pointer;font-size:12.5px;color:var(--fg3);margin-top:10px}
+  details.tec .body{font-size:12.5px;color:var(--fg2);padding-top:6px}
+  .pop{position:fixed;inset:0;background:rgba(26,31,26,.34);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .pop.on{display:flex}
+  .pop-box{background:var(--paper);border:1px solid var(--line);border-radius:12px;max-width:420px;padding:20px}
+  .pop-box b{font-size:16px;display:block;margin-bottom:8px;color:var(--fg)}
+  .pop-box p{font-size:14px;color:var(--fg2);margin:0 0 16px}
+  .pop-box .closeb{background:var(--algae);color:#fff;border:none;border-radius:7px;padding:9px 16px;font:600 13px/1 inherit;cursor:pointer}
+</style>
+<style>
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+  .tab{padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--fg2);cursor:pointer;font:600 13px/1 inherit}
+  .tab.on{background:var(--algae);border-color:var(--algae);color:#fff}
+  .tab.full{border-color:var(--algae-hi);color:var(--algae)}
+  .tab.on.full{color:#fff}
+  .nav{display:flex;justify-content:space-between;margin:18px 0 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1><span class="g">gororoba</span> · anotação do dataset</h1>
+  <p class="sub">113 textos, em 4 blocos. Três perguntas por texto, no ouvido. Salva sozinho, dá pra parar e voltar. Cada um faz sozinho, sem ver a nota do outro.</p>
+  <div class="row who">
+    <input id="who" placeholder="seu nome ou apelido" autocomplete="off">
+    <span class="prog" id="prog">0 de 0 feitos</span>
+  </div>
+  <div class="bar"><i id="barfill"></i></div>
+</div></header>
+
+<div class="wrap"><details class="leg" open><summary>Como funciona (leia uma vez)</summary><div class="body">
+    <p>Pra cada texto, três perguntas. Em cada uma você responde assim:</p>
+    <table>
+      <tr><td><b>Não</b></td><td>não tem nada disso.</td></tr>
+      <tr><td><b>Um pouco</b></td><td>tem UM caso solto, não toma conta do texto.</td></tr>
+      <tr><td><b>Sim</b></td><td>tem e PEGA O TOM, ou aparece duas vezes ou mais.</td></tr>
+    </table>
+    <p>Toca no <b>?</b> ao lado da pergunta pra ver exemplos a qualquer hora.</p>
+    <div class="item"><b>1. Enrolação no começo.</b> Palavra que enfeita e não diz nada, jeito de redação de escola.<br><span class="ex">Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma".</span></div>
+    <div class="item"><b>2. Frase sem dono.</b> Ninguém aparece fazendo, soa a relatório frio.<br><span class="ex">Tipo: "foi feito", "pode-se observar", "foi realizado com sucesso", "vou estar enviando".</span></div>
+    <div class="item"><b>3. Cara de robô.</b> Frase pronta que toda IA solta, abertura de textão.<br><span class="ex">Tipo: "ótima pergunta!", "com certeza!", "no mundo de hoje", "não é X, é Y", travessão usado de enfeite.</span></div>
+    <div class="ouro"><b>Regra de ouro:</b> pontua pelo que está no texto, não pelo sotaque. Gente que fala simples ou puxa pro mineirês não é robô: "brabo", "sô", "cê", "trem", "uai" é <b>Não</b> nas três, sempre.</div>
+  </div></details>
+
+  <details class="leg" open><summary>Exemplos já resolvidos (leia, calibra o olho)</summary><div class="body">
+    <p>Como os dois deviam pontuar os mesmos textos. <b>Os dois leem isto juntos antes de começar</b>, é o que alinha a mão. Depois cada um pontua sozinho.</p>
+    <div class="item"><b>"É importante ressaltar que, nesse sentido, vale destacar que a comunicação é fundamental."</b><br><span class="ex">Enrolação: <b>Sim</b> (três conectivos, toma conta do texto) · Frase sem dono: Não · Cara de robô: Não</span></div>
+    <div class="item"><b>"A entrega foi realizada com sucesso pela equipe."</b><br><span class="ex">Enrolação: Não · Frase sem dono: <b>Sim</b> ("foi realizada", ninguém aparece fazendo) · Cara de robô: Não</span></div>
+    <div class="item"><b>"Fechamos o corte ontem. Vale lembrar que ainda falta a trilha."</b><br><span class="ex">Enrolação: <b>Um pouco</b> (um "vale lembrar" solto, não domina) · Frase sem dono: Não · Cara de robô: Não</span></div>
+    <div class="item"><b>"Esse trem ficou brabo, sô. Liga o som e vê."</b><br><span class="ex"><b>Não</b> nas três. Mineirês e fala de gente não é robô, nunca. Esse é o teste do anti-robô.</span></div>
+    <div class="item"><b>"A inovação tem um papel cada vez mais relevante no cenário atual. Diante disso, investir é essencial de maneira expressiva."</b><br><span class="ex">Enrolação: <b>Sim</b> ("diante disso") · Frase sem dono: Não · Cara de robô: <b>Sim</b> ("no cenário atual", "de maneira expressiva", textão que enche linguiça e não diz nada). Esse é o slop que a régua persegue, mesmo sem nenhuma gíria.</span></div>
+    <div class="item"><b>"Ficou doido, bicho. Manda ver que tá no ponto."</b><br><span class="ex"><b>Não</b> nas três. Gíria e empolgação de gente de verdade não é cara de robô. Bateu dúvida se gíria é robô? É Não.</span></div>
+    <div class="item"><b>"No fim do dia, é tudo sobre paixão. A gente vai a milha extra todo dia."</b><br><span class="ex">Enrolação: <b>Não</b> (não tem conectivo de redação) · Frase sem dono: Não · Cara de robô: <b>Sim</b> ("no fim do dia", "a milha extra" são bordões traduzidos do inglês). Slop de conversa cai aqui, na pergunta 3, não na 1.</span></div>
+  </div></details></div>
+
+<div class="wrap"><div class="tabs" id="tabs"></div></div>
+<main class="wrap" id="cards"></main>
+<div class="wrap nav">
+  <button class="ghost" id="prev">&larr; bloco anterior</button>
+  <button class="act" id="next">próximo bloco &rarr;</button>
+</div>
+
+<footer><div class="wrap row">
+  <button class="act" id="exp">Salvar minha resposta (.csv)</button>
+  <button class="ghost" id="clr">Limpar tudo</button>
+  <span class="msg" id="msg"></span>
+</div></footer>
+
+<div class="wrap">
+  <div class="check">
+    <h2>Vocês deram as mesmas notas?</h2>
+    <p class="msg">Quando os dois terminarem os 113, cada um salva o seu arquivo e carrega os dois aqui. Sai o quanto vocês bateram, por pergunta. Faça isso <b>antes</b> de conversar sobre as diferenças.</p>
+    <div class="file">Resposta de um: <input type="file" id="fa" accept=".csv"></div>
+    <div class="file">Resposta do outro: <input type="file" id="fb" accept=".csv"></div>
+    <div id="kres"></div>
+  </div>
+</div>
+
+<div class="pop" id="pop"><div class="pop-box">
+  <b id="pop-t"></b><p id="pop-x"></p><button class="closeb" id="pop-c">fechar</button>
+</div></div>
+
+<script>
+const TRECHOS = [
+  {"id": "095", "trecho": "Junte o sangue e vá batendo com vinagre, batendo até ficar espumoso."},
+  {"id": "108", "trecho": "e aí eu fico pensando \"nossa, viver viajando assim deve ser horrível\", então penso \"não, melhor voltar aqui\""},
+  {"id": "079", "trecho": "O projeto previa a coleta de dados de três tipos: elocuções formais, diálogo entre dois informantes e diálogo entre informante e documentador, sempre com falantes cultos."},
+  {"id": "023", "trecho": "Estamos falando de uma oportunidade que é nada menos que transformadora para a sua carreira."},
+  {"id": "059", "trecho": "Eu não aprecio nada estrangeiro, entendeu? Eu acho a invasão cultural um negócio assim de louco."},
+  {"id": "080", "trecho": "Longe de constituir erro ou desvio, trata-se de uma variante legítima do português brasileiro, resultado da atuação regular de processos linguísticos."},
+  {"id": "094", "trecho": "Seu filho quer ficar assistindo TV até onze, meia-noite, tu deixa?"},
+  {"id": "104", "trecho": "aí teve que ficar esperando lá, a gente tava cansada que nós ficamos o dia inteiro no parque, só que aí foi legal porque tava à noite"},
+  {"id": "001", "trecho": "No mundo de hoje, a gestão de equipes desempenha um papel fundamental no sucesso das organizações, e vale ressaltar que líderes preparados fazem toda a diferença."},
+  {"id": "064", "trecho": "A música mais imbecil que você pode imaginar: o cara dizia \"eu nunca vou morrer, eu sempre vou ser jovem\". E aquilo estava em parada de grande sucesso."},
+  {"id": "033", "trecho": "Estamos falando de resultados que são nada menos que extraordinários para quem se compromete."},
+  {"id": "053", "trecho": "O caminho de ajuste via aumento de carga tributária é muito mal visto pela sociedade e pelo Congresso."},
+  {"id": "017", "trecho": "Vale ressaltar que a inteligência emocional se tornou uma competência indispensável, e dessa forma é possível perceber que o autoconhecimento fortalece as relações."},
+  {"id": "026", "trecho": "Isso sendo dito, vamos mergulhar fundo nas estratégias que vão levar seu time para o próximo nível."},
+  {"id": "101", "trecho": "muita gente tá cheia de carro aí, cheia de apartamento, tá desesperado"},
+  {"id": "015", "trecho": "É importante destacar que a alimentação saudável impacta diretamente a longevidade, e nesse sentido nota-se que escolhas conscientes fazem toda a diferença."},
+  {"id": "049", "trecho": "Pintei a parede do fundo de cinza médio pra não estourar no fundo do enquadramento."},
+  {"id": "091", "trecho": "Olhe, deixe, porque o casamento sou eu que arrumo, não é o senhor que vai decidir nada não."},
+  {"id": "058", "trecho": "Eu dou tudo que posso no trabalho; agora, fora dele eu quero me alienar totalmente, sabe?"},
+  {"id": "063", "trecho": "Eu me visto de bruxa, boto maquiagem, ajeito o cabelo e começo a falar com jeito de bruxa, aí as crianças adoram."},
+  {"id": "089", "trecho": "O cabra vai dizer que nunca vai morrer e que sempre vai ser jovem?"},
+  {"id": "085", "trecho": "Enquanto não vem outra coisa, é uma forma de resolver a vida deles, a gente não vai deixar eles morrer de fome, né?"},
+  {"id": "003", "trecho": "Diante disso, a educação se mostra como um pilar essencial para o desenvolvimento humano, sendo possível perceber que o aprendizado transforma realidades de maneira significativa."},
+  {"id": "041", "trecho": "Lixei a porta de novo com a 220 e passei a segunda demão de verniz no sentido da fibra."},
+  {"id": "002", "trecho": "É importante destacar que a saúde mental vem ganhando cada vez mais espaço nas discussões contemporâneas, e nota-se que o autocuidado se tornou indispensável."},
+  {"id": "057", "trecho": "Eu acho que depende do ponto de vista, do objetivo que você quer atingir, não é? E também do tipo de grupo, do tipo de pessoas que você interage, de como você vive."},
+  {"id": "043", "trecho": "A van quebrou na saída, peguei metrô e cheguei no set com 20 minutos de atraso."},
+  {"id": "039", "trecho": "Movi a reunião das 14h pra quinta porque o cliente só fecha o orçamento na quarta à noite."},
+  {"id": "011", "trecho": "Outrossim, a inovação tornou-se essencial para a competitividade das empresas, e nota-se que quem não se adapta tende a ficar para trás no mercado."},
+  {"id": "066", "trecho": "A Record está mesmo animada com o sucesso da novela."},
+  {"id": "113", "trecho": "Em conjunto com a campanha contra a poliomielite, está ocorrendo a mobilização para atualização das cadernetas de vacina."},
+  {"id": "027", "trecho": "Quando se trata de produtividade, a milha extra é o que separa os bons dos excelentes."},
+  {"id": "083", "trecho": "Se você começa a conversar, o cara que está lá te dá um fora, não é?"},
+  {"id": "061", "trecho": "Pra mim, uma pessoa é toda uma integração, sabe? Eu não conseguiria me desligar: eu aqui sou essa pessoa, e saindo daqui eu não consigo virar outra."},
+  {"id": "076", "trecho": "Conforme regra estabelecida pelo Projeto, nenhum inquérito deve ser identificado; por essa razão, todos os nomes próprios que possam revelar a identidade dos informantes são substituídos por suas iniciais."},
+  {"id": "078", "trecho": "A seleção dessas capitais foi feita a partir dos seguintes critérios: ter a cidade pelo menos um milhão de habitantes e estratificação social suficiente para atender às exigências do projeto."},
+  {"id": "022", "trecho": "Deixa eu ser honesto com você: quando se trata de construir um negócio, não existe atalho mágico."},
+  {"id": "097", "trecho": "cê quer que eu falo quando que eu cheguei aqui em belo horizonte"},
+  {"id": "034", "trecho": "No fim do dia, tenha certeza de que você está cercado das pessoas certas para crescer."},
+  {"id": "062", "trecho": "Muitas vezes você sai à toa, tá de saco cheio, tá em casa não tá gostando daquela vida familiar, e aí acaba encontrando coisas muito mais importantes."},
+  {"id": "060", "trecho": "Acho que o Brasil é Brasil e a gente tem que cantar é brasileiro, não é nem português, é em brasileiro."},
+  {"id": "077", "trecho": "Os números aparecem por extenso e os nomes de obras e nomes estrangeiros aparecem em itálico."},
+  {"id": "045", "trecho": "Deixei o feijão de molho desde ontem à noite, cozinha em 25 minutos na pressão agora."},
+  {"id": "093", "trecho": "Se teu filho quer ficar na rua até mais de dez horas da noite, tu deixa?"},
+  {"id": "092", "trecho": "Não saí de casa, tentei conviver com eles no maior clima de repressão, tentando mostrar que não era assim, era assado."},
+  {"id": "112", "trecho": "A autorização é necessária porque o réu cumpre prisão domiciliar em Brasília devido a sua condenação no processo."},
+  {"id": "068", "trecho": "A jurisdição especial contará com salas de justiça e um tribunal para a paz."},
+  {"id": "052", "trecho": "Tenho orgulho de ter feito parte da construção do partido."},
+  {"id": "082", "trecho": "Numa assembleia, aquele monte de gente, às vezes as pessoas ficam até inibidas de colocar o pensamento; na mesa de um bar é mais fácil."},
+  {"id": "030", "trecho": "Tenha certeza de que cada cliente se sinta especial, porque no fim do dia é isso que constrói lealdade."},
+  {"id": "021", "trecho": "No fim do dia, o que realmente importa é dar o seu melhor e percorrer a milha extra todos os dias."},
+  {"id": "050", "trecho": "Cortei a planilha pela metade: tirei as colunas que ninguém preenchia e deixei só as cinco que a gente usa."},
+  {"id": "100", "trecho": "felicidade é tá dentro da gente, na verdade o conforto ele é psicológico, ele não é físico"},
+  {"id": "035", "trecho": "Deixa eu ser honesto com você sobre dinheiro: no final das contas, disciplina vale mais que sorte."},
+  {"id": "044", "trecho": "Refiz o storyboard em três quadros só: abre na mão, corta pro rosto, fecha no produto."},
+  {"id": "032", "trecho": "Quando se trata de saúde, um dia de cada vez é a mentalidade que vai te levar longe."},
+  {"id": "067", "trecho": "Pressionado, o árbitro apitou apenas uma falta."},
+  {"id": "107", "trecho": "eu fico vendo como é que é, não sei, a gente não sabe que tipo de gente que esses caras são, pelo menos minha opinião, né"},
+  {"id": "004", "trecho": "No cenário atual, a tecnologia evolui de forma acelerada, e dessa forma constata-se que a transformação digital impacta todos os setores da sociedade."},
+  {"id": "037", "trecho": "A massa do pão precisa descansar 40 minutos coberta antes de abrir, senão racha na hora de assar."},
+  {"id": "099", "trecho": "se precisar bem, mas queira deus que eu nunca hei de precisar desse trem"},
+  {"id": "046", "trecho": "Marquei a colorização pra sexta de manhã, antes disso preciso aprovar o corte com o diretor."},
+  {"id": "036", "trecho": "Cortei a intro do episódio em 12 segundos, ficou mais seco e entra direto na primeira pergunta."},
+  {"id": "105", "trecho": "tá feio, tem muito rapazinho aí que rouba os outros, assim mais velho, pra comprar"},
+  {"id": "048", "trecho": "Comprei dois rolos de fita gaffer preta e um tripé novo, o antigo tava com a trava frouxa."},
+  {"id": "025", "trecho": "Tenha certeza de que você está fazendo as escolhas certas, porque no final das contas elas definem o seu futuro."},
+  {"id": "014", "trecho": "No cenário atual, o empreendedorismo cresce de maneira significativa, e constata-se que a coragem de inovar move a economia para frente."},
+  {"id": "024", "trecho": "Um dia de cada vez, isso é o que eu sempre digo para quem está começando essa jornada."},
+  {"id": "040", "trecho": "O loop tava processando a lista inteira a cada clique; cacheei o resultado e o tempo caiu de 3s pra 200ms."},
+  {"id": "088", "trecho": "O zé povão mesmo não entende nada; passa um rock inglês aí e o pessoal nem sabe a tradução da coisa."},
+  {"id": "070", "trecho": "Ele e mais quatorze pessoas vão responder na Justiça por crimes como corrupção e lavagem de dinheiro."},
+  {"id": "019", "trecho": "Sendo assim, o consumo consciente ganha cada vez mais força no cenário atual, e é importante destacar que cada escolha individual reflete no coletivo."},
+  {"id": "096", "trecho": "Cê tá bão? Cuma? Oncê vai?"},
+  {"id": "038", "trecho": "Troquei o cabo XLR do microfone principal e o ruído de fundo sumiu na gravação de hoje."},
+  {"id": "018", "trecho": "No mundo de hoje, o trabalho remoto consolidou-se como uma realidade, e em suma constata-se que a flexibilidade aumenta a satisfação dos colaboradores."},
+  {"id": "072", "trecho": "O objetivo é verificar se existe propaganda enganosa e falta de informação."},
+  {"id": "006", "trecho": "O marketing digital desempenha um papel fundamental no crescimento das marcas, e pode-se notar que as estratégias precisam acompanhar as mudanças do mercado."},
+  {"id": "087", "trecho": "Quando a gente começa a fazer um trabalho, chega um ponto que dá pra deixar o pessoal caminhar sozinho, e o padre não quer deixar."},
+  {"id": "109", "trecho": "porque a gente só pode dizer com propriedade quando a gente tem aquilo, né, então pode ser que a minha cabeça mudasse"},
+  {"id": "111", "trecho": "O ministro pediu vistas do processo, o que adiou uma decisão sobre o caso."},
+  {"id": "110", "trecho": "fui muito pra lá, então achava sempre o sotaque muito chique, uma coisa bonita, sabe"},
+  {"id": "074", "trecho": "Os profissionais selecionados preencherão vagas ociosas, principalmente por desistência."},
+  {"id": "090", "trecho": "Eu disse pra ele: olha, eu vou casar. E ele o tempo todo perguntando se eu não tinha feito nada."},
+  {"id": "103", "trecho": "e aí eu fui subir pelo palco, e quando eu subi uma perna a outra escorregou, e aí eu pegou de raspão, raspei na quina e cortou"},
+  {"id": "086", "trecho": "A gente também escuta, a gente ouve, não é? O que é que eles têm a dizer e o que é que a gente tem pra levar pra eles lá."},
+  {"id": "081", "trecho": "Mais sérias, o que acontece muitas vezes é na mesa de um bar do que dentro da associação. Acho que lá na mesa do bar o pessoal é mais sincero, mais aberto."},
+  {"id": "029", "trecho": "Deixa eu ser honesto: estamos falando de um produto que vai mudar a forma como você trabalha."},
+  {"id": "016", "trecho": "Diante disso, a transformação digital desempenha um papel fundamental nas organizações, e cada vez mais pode-se notar a importância de investir em dados."},
+  {"id": "073", "trecho": "As datas foram anunciadas pelo ministro da Educação em coletiva de imprensa."},
+  {"id": "102", "trecho": "então a gente percebe que tem adolescentes que antes viviam aí no mundo da droga, fumavam, bebiam, e a gente percebe que eles tão acordando"},
+  {"id": "055", "trecho": "A noite tinha tudo para ser de festa para o clube no estádio."},
+  {"id": "071", "trecho": "A nota de crédito da empresa foi rebaixada nesta quinta-feira pela agência de classificação de risco."},
+  {"id": "098", "trecho": "na verdade era uns chamados copo de apito do trem de ferro que meu sogro usava no trem, que ele era maquinista"},
+  {"id": "031", "trecho": "Isso sendo dito, quero que você saiba que o sucesso é uma jornada, não um destino."},
+  {"id": "009", "trecho": "Os relacionamentos interpessoais desempenham um papel fundamental na qualidade de vida, e diante disso constata-se que a comunicação é a base de toda conexão."},
+  {"id": "054", "trecho": "Todo jogador do time tem o direito de jogar uma partida mal sem perder a posição."},
+  {"id": "056", "trecho": "Se ganharmos do adversário, vamos somar três pontos importantes e amenizar o tropeço da rodada passada."},
+  {"id": "012", "trecho": "O bem-estar desempenha um papel fundamental na rotina das pessoas no mundo de hoje, e vale ressaltar que pequenos hábitos geram grandes transformações."},
+  {"id": "005", "trecho": "Vale ressaltar que a sustentabilidade deixou de ser uma opção para se tornar uma necessidade, e nesse sentido as empresas precisam repensar suas práticas."},
+  {"id": "028", "trecho": "No final das contas, investir em você mesmo é o melhor investimento que você pode fazer."},
+  {"id": "065", "trecho": "Senadores da oposição e até da base criticaram duramente a inclusão dos jabutis."},
+  {"id": "008", "trecho": "Nesse sentido, a produtividade tornou-se um tema central no ambiente corporativo, e foi observado que a organização do tempo melhora os resultados de forma significativa."},
+  {"id": "075", "trecho": "As informações são da Superintendência de Trânsito e Transporte do município."},
+  {"id": "047", "trecho": "O servidor caiu às 3h, reiniciei o serviço e subi um alerta pra avisar se repetir."},
+  {"id": "013", "trecho": "Dessa forma, a cultura organizacional influencia diretamente o clima de trabalho, e é possível perceber que valores bem definidos orientam as decisões da empresa."},
+  {"id": "069", "trecho": "O presidente da Câmara alegou na Justiça que as declarações mancharam sua honra e reputação."},
+  {"id": "106", "trecho": "e o cara não tá fazendo mal pra ninguém, só quer trabalhar, e as pessoas olham torto, sabe"},
+  {"id": "010", "trecho": "A liderança no cenário atual exige cada vez mais empatia e visão, e sendo assim é possível perceber que gestores inspiradores constroem equipes mais engajadas."},
+  {"id": "007", "trecho": "Em suma, a educação financeira é cada vez mais relevante no mundo de hoje, e é importante destacar que o planejamento garante segurança a longo prazo."},
+  {"id": "084", "trecho": "Tem sauna, tem esporte, tem almoço, tem piscina, né? E além disso eu participo também do grupo da igreja."},
+  {"id": "051", "trecho": "A gente faz o aporte financeiro, é como se a empresa fosse parceira do grupo."},
+  {"id": "020", "trecho": "A criatividade desempenha um papel fundamental na resolução de problemas, e nesse sentido nota-se que mentes abertas encontram caminhos que outras não veem."},
+  {"id": "042", "trecho": "Reduzi o low cut da voz pra 80Hz e tirei aquela lama que sobrava no grave do master."}
+];
+const EIXOS = [
+  {k:"c", ask:"Tem enrolação pra começar frase?", t:"Enrolação no começo", x:'Conectivo de redação formal que enfeita e não diz nada. Tipo: "vale ressaltar que", "nesse sentido", "em suma", "dito isso", "dessa forma", "diante disso". SÓ esses, os de redação. Bordão de conversa traduzido tipo "no fim do dia", "deixa eu ser honesto", "olha só" NÃO entra aqui, isso é cara de robô (pergunta 3).'},
+  {k:"v", ask:"As frases escondem quem fez?", t:"Frase sem dono", x:'Ninguém aparece fazendo, soa a relatório frio. Tipo: "foi feito", "pode-se observar", "foi realizado", "vou estar enviando".'},
+  {k:"l", ask:"Tem clichê, cara de IA?", t:"Cara de robô", x:'Frase pronta que toda IA solta, abertura de textão, e bordão de conversa traduzido do inglês. Tipo: "ótima pergunta!", "com certeza!", "no mundo de hoje", "mais do que nunca", "não é X, é Y", "no fim do dia", "a milha extra", "deixa eu ser honesto", "um dia de cada vez", travessão usado de enfeite. ATENÇÃO, o que NÃO é cara de robô: gíria e mineirês. "brabo", "sô", "cê", "trem", "uai", "bora" é sempre Não. Fala de gente de verdade, mesmo torta ou simples, é Não.'},
+];
+const VALS = ["Não","Um pouco","Sim"];
+const COL = {c:"conectivo_score", v:"vozpassiva_score", l:"cliche_score"};
+const NBLOCOS = 4;
+const TAM = Math.ceil(TRECHOS.length / NBLOCOS);
+const $ = s => document.querySelector(s);
+let who = "", state = {}, bloco = 0;
+
+function key(){ return "gororoba-dataset:" + (who||"_"); }
+function load(){ try{ state = JSON.parse(localStorage.getItem(key())) || {}; }catch(e){ state={}; } }
+function save(){ localStorage.setItem(key(), JSON.stringify(state)); }
+function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function feito(t){ const s=state[t.id]||{}; return s.c!=null&&s.v!=null&&s.l!=null; }
+function slice(i){ return TRECHOS.slice(i*TAM, (i+1)*TAM); }
+
+function tabs(){
+  const el=$("#tabs"); el.innerHTML="";
+  for(let i=0;i<NBLOCOS;i++){
+    const arr=slice(i), f=arr.filter(feito).length, full=f===arr.length;
+    const b=document.createElement("button");
+    b.className="tab"+(i===bloco?" on":"")+(full?" full":"");
+    b.textContent="Bloco "+(i+1)+" ("+f+"/"+arr.length+")";
+    b.onclick=()=>{ bloco=i; render(); window.scrollTo(0,0); };
+    el.appendChild(b);
+  }
+}
+function render(){
+  tabs();
+  const root=$("#cards"); root.innerHTML="";
+  slice(bloco).forEach((t,i) => {
+    const st=state[t.id]||{};
+    const card=document.createElement("div");
+    card.className="card"+(feito(t)?" done":"");
+    let h='<div class="n">bloco '+(bloco+1)+' · texto '+(i+1)+' de '+slice(bloco).length+'</div><div class="trecho">'+esc(t.trecho)+'</div>';
+    EIXOS.forEach(e => {
+      h+='<div class="q"><div class="ask">'+esc(e.ask)+' <span class="qi" data-k="'+e.k+'">?</span></div><div class="btns" data-id="'+t.id+'" data-k="'+e.k+'">';
+      VALS.forEach((lab,v)=> h+='<button data-v="'+v+'" class="'+(st[e.k]===v?"sel":"")+'">'+lab+'</button>');
+      h+='</div></div>';
+    });
+    h+='<textarea class="notas" data-id="'+t.id+'" placeholder="quer anotar algo? (opcional)">'+esc(st.n||"")+'</textarea>';
+    card.innerHTML=h; root.appendChild(card);
+  });
+  $("#prev").style.visibility = bloco>0?"visible":"hidden";
+  $("#next").style.visibility = bloco<NBLOCOS-1?"visible":"hidden";
+  bind(); progress();
+}
+function bind(){
+  document.querySelectorAll(".btns").forEach(b => b.querySelectorAll("button").forEach(btn => {
+    btn.onclick = () => {
+      const id=b.dataset.id, k=b.dataset.k, v=+btn.dataset.v;
+      state[id]=state[id]||{};
+      state[id][k]=(state[id][k]===v?null:v);
+      if(state[id][k]===null) delete state[id][k];
+      save();
+      b.querySelectorAll("button").forEach(x=>x.classList.toggle("sel", +x.dataset.v===state[id][k]));
+      b.closest(".card").classList.toggle("done", feito({id}));
+      tabs(); progress();
+    };
+  }));
+  document.querySelectorAll(".qi").forEach(q => q.onclick=()=>{
+    const e=EIXOS.find(x=>x.k===q.dataset.k);
+    $("#pop-t").textContent=e.t; $("#pop-x").textContent=e.x; $("#pop").classList.add("on");
+  });
+  document.querySelectorAll("textarea.notas").forEach(ta => ta.oninput=()=>{
+    const id=ta.dataset.id; state[id]=state[id]||{}; state[id].n=ta.value; save();
+  });
+}
+$("#prev").onclick=()=>{ if(bloco>0){bloco--;render();window.scrollTo(0,0);} };
+$("#next").onclick=()=>{ if(bloco<NBLOCOS-1){bloco++;render();window.scrollTo(0,0);} };
+$("#pop-c").onclick=()=>$("#pop").classList.remove("on");
+$("#pop").onclick=e=>{ if(e.target.id==="pop") $("#pop").classList.remove("on"); };
+
+function progress(){
+  const done=TRECHOS.filter(feito).length;
+  $("#prog").textContent=done+" de "+TRECHOS.length+" feitos";
+  $("#barfill").style.width=(100*done/TRECHOS.length)+"%";
+}
+$("#who").oninput=e=>{ who=e.target.value.trim(); load(); render(); };
+
+$("#exp").onclick=()=>{
+  if(!who){ msg("Escreve teu nome ali em cima antes de salvar."); return; }
+  const done=TRECHOS.filter(feito).length;
+  if(done<TRECHOS.length && !confirm("Faltam "+(TRECHOS.length-done)+" texto(s). Salvar mesmo assim?")) return;
+  const rows=[["id","trecho","conectivo_score","vozpassiva_score","cliche_score","anotador","notas"]];
+  TRECHOS.forEach(t=>{ const s=state[t.id]||{}; rows.push([t.id,t.trecho,s.c??"",s.v??"",s.l??"",who,s.n||""]); });
+  const csv=rows.map(r=>r.map(csvCell).join(",")).join("\n");
+  dl("dataset-"+who.replace(/[^a-z0-9_-]/gi,"_")+".csv", csv);
+  msg("Salvo. Manda esse arquivo pro outro (ou junta os dois ali embaixo).");
+};
+$("#clr").onclick=()=>{ if(confirm("Apagar tuas respostas deste navegador?")){ localStorage.removeItem(key()); load(); render(); } };
+function csvCell(v){ v=String(v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+function dl(name,text){ const b=new Blob([text],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=name; a.click(); }
+function msg(s){ $("#msg").textContent=s; }
+
+
+
+load(); render();
+</script>
+</body>
+</html>
