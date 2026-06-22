@@ -1,13 +1,14 @@
 # Fixture: voz limpa (deve passar sem nenhum alerta)
 
-Brasileires de várias regiões mais prosa direta. Fala popular legítima não é slop, é
-voz. Se o linter acusar qualquer linha daqui, virou o detector enviesado que a gente
-jurou não ser: é falso positivo e bug. Este arquivo trava isso.
+Fala popular brasileira de várias regiões, mais prosa direta. Fala legítima é voz, não
+slop. Se o linter acusar qualquer linha daqui, ele virou o detector enviesado que a
+gente jurou não ser: é falso positivo, é bug. Este arquivo trava isso.
 
-A cobertura regional abaixo é uma semente, escrita com a mão de quem não é nativo de
-toda região. Pode ter exemplo morno ou datado. Falta o teu canto do Brasil, ou tem
-coisa que soa de novela aqui? Manda trecho de verdade (ver CONTRIBUTING). É o melhor
-primeiro PR que existe pra este projeto.
+Os exemplos são autorais, escritos pra soar como fala real, calibrados por estudos de
+dialetologia e por corpora de fala espontânea (C-ORAL-BRASIL, NURC, ALiB). Não são
+citação literal de ninguém. A régua é uma só: uma marca por frase, o sotaque mora na
+construção, não na quantidade de gíria. Soou de novela pro teu ouvido nativo? É bug:
+manda a fala certa do teu canto (ver CONTRIBUTING).
 
 ## Prosa direta (sem sotaque marcado)
 
@@ -22,51 +23,48 @@ assim.
 
 ## Minas Gerais
 
-Cê viu o trem que o sô falou, uai? Pois é. A gente fechou o corte ontem e ficou brabo
-demais. Nó, ficou bão. Belo Horizonte tem um jeito próprio de fazer música, a cena
-daqui não copia ninguém.
+Cê viu esse trem? Tá doido. Uai, e eu sei lá. Vai com calma que não tem pressa não.
 
 ## Rio de Janeiro
 
-Mermão, o show ontem foi sinistro. A galera subiu na grade, foi maneiro pra caramba.
-Pô, valeu cada minuto.
+Caraca, que parada doida. Ficou maneiro pra caramba. Qual é a tua?
 
 ## São Paulo (capital)
 
-Mano, o corte ficou mó daora. Colei no estúdio de tarde, fechei a base, voou. Truta,
-salvou o trampo.
+Mano, tá ligado? Bora pro rolê mais tarde. Ficou daora demais.
+
+## Interior paulista (caipira)
+
+Os menino foi pro mato cedo. Minha fia, isso não dá certo não.
 
 ## Rio Grande do Sul
 
-Bah, tchê, que show tri ontem. A gurizada lotou o galpão. Capaz que volte ano que vem.
-Tomei uns mate e fui embora.
+Bah, tu viu o jogo ontem? Tá tri frio hoje, guria. Capaz que ele vem.
 
-## Pernambuco
+## Santa Catarina (manezês)
 
-Oxente, o forró ontem foi arretado, visse? O povo todo dançou até tarde. Bora repetir
-mês que vem, menino.
+Tu viu o que aconteceu, rapaz? Tô mal de bitaca essa semana. Fica bispando ali.
 
 ## Bahia
 
-Ó, rapá, o ensaio foi massa. Painho chegou, mainha veio junto, e o auê foi geral. Véi,
-nem vi o tempo passar.
+Ô véi, qualé, sumiu? Vi Maria na feira mais cedo. Rapá, deixa disso.
+
+## Pernambuco
+
+Tu visse isso? A gente vai sábado, visse. Ficou arretado o forró.
 
 ## Ceará
 
-Macho, tu é doido? O som ficou show arriba. A gente passou a tarde no estúdio e saiu só
-de noite. Vôte, ninguém parava de tocar.
-
-## Pará
-
-Égua, maninho, o arraial foi pai d'égua. Tu viu o tamanho da festa? Bora de novo, que
-lá foi bom mesmo.
-
-## Goiás
-
-Uai, o trem ficou bão demais da conta. A gente gravou de manhã, fechou de tarde. Vô
-voltar lá amanhã, cara.
+Arriégua, que foi isso? Deixa de ser abestado. Tô num aperreio danado.
 
 ## Maranhão
 
-Mana, o tambor de crioula ontem foi bom demais. O pessoal bateu caixa a noite toda.
-Égua, foi festa boa.
+Tu vais à festa hoje? Já fizeste o que eu pedi? Aonde é que tu vais agora?
+
+## Pará
+
+Égua, mano, tu não vais acreditar. Tô brocado, vamo comer. Que facada esse preço.
+
+## Goiás
+
+Bão demais da conta esse trem. Aneim, não dou conta disso não. Vou lá amanhã, então.
