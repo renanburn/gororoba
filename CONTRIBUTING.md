@@ -63,6 +63,12 @@ issue do tipo "falso-positivo" com o trecho exato e qual regra disparou (`vale -
 mostra a regra). O trecho vira anti-fixture em `tests/voz-limpa.md`, a regra é ajustada
 pra parar de vazar, e o teste trava pra não voltar.
 
+O anti-fixture é organizado por localidade, e a cobertura regional ainda é uma semente
+escrita por quem não é nativo de todo canto. Falar do teu lugar é a melhor coisa que tu
+pode fazer aqui: manda fala de verdade da tua região, sem caricatura de novela. Mineirês,
+baianês, gauchês, paraense, o que for. Quanto mais sotaque legítimo o teste guarda, menos
+chance do linter confundir voz com slop.
+
 ## Contribuir trecho anotado pro dataset (Camada 1)
 
 A Camada 1 é o dataset pt-BR de slop anotado por humanos, com kappa de Cohen. É o moat
