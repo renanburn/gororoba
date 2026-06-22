@@ -7,11 +7,20 @@ com o julgamento humano.
 
 ## Status
 
-**Em construção. 0 trechos anotados.** A planilha tem só o cabeçalho. A anotação é
-trabalho humano (Renan + 1) e ainda não começou. O plano de sourcing está em
-`docs/plano-coleta.md`; o guia de rótulo, em `docs/guia-anotacao.md`.
+**Em construção. Piloto validado, coleta em andamento.**
 
-Meta v0: 100 a 150 trechos, balanceados nas 7 classes de origem.
+- **Piloto: passou.** Renan + Lírios calibraram a régua dos três eixos em 15 trechos.
+  Kappa de Cohen na rodada final: conectivo 0,80, voz-passiva 1,00, clichê 0,81 (os três
+  em "concordância quase perfeita"). Evidência crua e o histórico das três rodadas em
+  `dataset/piloto/rodadas/`.
+- **Dataset de validação: 50 de ~120 trechos.** As três classes geradas (ia-sem-voz,
+  ia-bem-promptada, tradução) já estão na planilha-mãe, scores em branco. Faltam as três
+  classes humanas (voz, formal, regional), que dependem de coleta de fonte real.
+
+Meta v0: 100 a 150 trechos, balanceados em 6 classes de origem. O `seo-generico` saiu da
+v0 (o piloto mostrou que, junto do clichê, derruba a concordância) e vira eixo próprio na
+v0.2; a regra fica em `deferred/Hype.yml`. Plano de sourcing em `docs/plano-coleta.md`;
+guia de rótulo em `docs/guia-anotacao.md`.
 
 ## Estrutura
 

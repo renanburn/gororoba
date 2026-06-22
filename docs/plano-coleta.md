@@ -3,7 +3,11 @@
 Como juntar 100 a 150 trechos pt-BR balanceados nas 7 classes de origem. Pequeno mas
 real, no modelo de rigor do ASSIN (NILC/USP): poucos exemplos, anotação cuidada.
 
-**Este é o plano. Nada foi baixado nem coletado ainda.**
+**Status (2026-06-22):** o piloto passou (kappa dos 3 eixos em `dataset/piloto/rodadas/`).
+As classes geradas já entraram na planilha-mãe: 20 `ia-sem-voz`, 15 `traducao-automatica`,
+15 `ia-bem-promptada` (50 trechos, scores em branco). Falta a parte humana (`humano-com-voz`,
+`humano-formal-legitimo`, `humano-simples-regional`), que depende de coleta de fonte real,
+detalhada mais abaixo. O `seo-generico` saiu da v0 (vai pra v0.2).
 
 ## Meta por classe (alvo: ~120 trechos)
 
