@@ -107,6 +107,8 @@ ela, isto é uma régua útil; com ela, vira uma régua provada. Não vou chamar
 
 Abre o capô. O [posicionamento](docs/POSICIONAMENTO.md) responde de frente "isso é só
 regex?", "e os falsos positivos?", "pega fala popular?" e "por que confiar sem o kappa?".
+O documento [a régua](docs/a-regua.md) explica o porquê de cada eixo ser slop, e o que a
+régua de propósito não pega.
 
 ## Contribuir
 
