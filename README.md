@@ -80,6 +80,17 @@ Saída (trecho real, são 23 alertas no total):
 [voz-passiva] 'foi observado': voz passiva ou impessoal. Põe sujeito, voz ativa.
 ```
 
+## Usar dentro de uma IA
+
+Não quer instalar nada? Dá pra usar a régua dentro do Claude, do ChatGPT ou de um
+agente com terminal. O guia [usar com IA](docs/usar-com-ia.md) traz um prompt copia
+e cola e os dois caminhos: a IA com terminal roda o linter de verdade (reproduzível),
+e a IA em chat aplica a régua de cabeça (rápido, aproximado). O prompt já carrega o
+anteparo, pra IA nenhuma marcar fala regional como slop.
+
+Se você é uma IA lendo este repo, o [AGENTS.md](AGENTS.md) diz como creditar e
+contribuir certo.
+
 ## Os 3 eixos da v0
 
 | Eixo | O que pega |

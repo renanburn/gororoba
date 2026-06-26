@@ -19,9 +19,10 @@ echo "tests/voz-limpa.md -> $limpo alertas (espera 0)"
 [ "$limpo" -eq 0 ] || { echo "FALHA: voz-limpa.md devia passar limpo (anteparo anti-viés)"; fail=1; }
 
 # Docs de prosa que dizem passar na própria régua. Cada um tem que ter zero alerta.
-# (guia-anotacao.md e plano-coleta.md ficam de fora: citam tells dentro de exemplos
-#  de propósito, como o fixture sujo.)
-for doc in README.md index.md CONTRIBUTING.md CODE_OF_CONDUCT.md docs/POSICIONAMENTO.md; do
+# (guia-anotacao.md e plano-coleta.md ficam de fora: citam tells em exemplos fora de
+#  bloco de código, como o fixture sujo. usar-com-ia.md entra: cita os tells dentro do
+#  bloco do prompt, que o Vale ignora, então a prosa tem que passar limpa.)
+for doc in README.md index.md CONTRIBUTING.md CODE_OF_CONDUCT.md docs/POSICIONAMENTO.md AGENTS.md docs/usar-com-ia.md; do
   n=$(count "$doc")
   echo "$doc -> $n alertas (espera 0, passa na própria régua)"
   [ "$n" -eq 0 ] || { echo "FALHA: $doc devia passar na própria régua"; fail=1; }
