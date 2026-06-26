@@ -1,7 +1,7 @@
 # Como contribuir com o gororoba
 
-Um linter de voz só fica bom em conjunto. Cada pessoa que escreve em pt-BR conhece um
-tell de slop que eu não conheço, e cada uma conhece um jeito de falar legítimo que o
+Um linter de voz só fica bom em conjunto. Cada pessoa que escreve em pt-BR conhece uma
+marca de slop que eu não conheço, e cada uma conhece um jeito de falar legítimo que o
 linter não pode atropelar. Esta página diz como propor regra, como reportar erro e como
 ajudar a construir o dataset.
 
@@ -42,7 +42,7 @@ Se `bash tests/run.sh` terminar com "OK: ruleset validado.", está verde.
 1. Abre uma issue do tipo "regra-nova" antes do PR, descrevendo o padrão de slop e em
    qual dos 3 eixos ele cai (`conectivo-traducao`, `voz-passiva`, `cliche-ia`).
 2. Escolhe o eixo certo. Os arquivos de regra ficam em `styles/Gororoba/`. Quase tudo é
-   `extends: existence` com uma lista de `tokens`. Adiciona teu tell na regra do eixo,
+   `extends: existence` com uma lista de `tokens`. Adiciona tua marca na regra do eixo,
    ou cria um arquivo novo se for um sub-padrão distinto.
 3. Pensa na severidade. `error` é pra clichê de IA puro, que não tem defesa. `warning`
    é pro que quase sempre é slop mas tem exceção. `suggestion` é pro que depende de
@@ -91,8 +91,8 @@ moat, então não fazemos isso.
 
 A ironia do projeto: ele detecta o próprio slop. Todo `.md` que você adicionar deve
 passar na régua. Roda `vale teu-arquivo.md` e limpa os alertas que caírem fora de bloco
-de exemplo. Tells citados dentro de tabela de definição ou de bloco de exemplo são
-esperados (o fixture mostra a doença sem estar doente). Tell na prosa corrida é pra
+de exemplo. Marcas citadas dentro de tabela de definição ou de bloco de exemplo são
+esperadas (o fixture mostra a doença sem estar doente). Marca na prosa corrida é pra
 limpar.
 
 ## Código de conduta

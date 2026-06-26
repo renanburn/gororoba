@@ -50,7 +50,7 @@ alerta. Isto é a saída real de `vale tests/voz-limpa.md`:
 ✔ 0 errors, 0 warnings and 0 suggestions in 1 file.
 ```
 
-A frase "Cê viu o trem que o sô falou, uai?" passa limpa. O CI quebra se algum tell
+A frase "Cê viu o trem que o sô falou, uai?" passa limpa. O CI quebra se alguma marca
 vazar pra cima dela. Isto roda a cada push, então não fica no campo da promessa.
 
 ## Os 3 eixos da v0

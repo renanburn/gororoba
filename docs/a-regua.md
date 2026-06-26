@@ -8,7 +8,7 @@ de uma existente começa por aqui.
 
 Texto bom em português soa como alguém de verdade falando, não como artigo traduzido.
 
-O tell número um de texto requentado não é erro de gramática. É o contrário: gramática
+A marca número um de texto requentado não é erro de gramática. É o contrário: gramática
 limpa demais, conectivo demais, e o ritmo de quem nunca abriu a boca pra dizer aquilo. O
 slop é fluente e vazio ao mesmo tempo. Por isso a pergunta da régua é "vale a pena ler?",
 não "quem escreveu?". A régua persegue o que um brasileiro real não diria em voz alta.
@@ -82,6 +82,6 @@ qualquer um usar no próprio texto.
 ---
 
 Nota: rodar `vale docs/a-regua.md` acende vários alertas. Todos caem dentro dos exemplos,
-onde os tells estão citados de propósito pra ensinar o que cada eixo pega, igual o fixture
+onde as marcas estão citadas de propósito pra ensinar o que cada eixo pega, igual o fixture
 `tests/gororoba.md`. A prosa explicativa, fora dos exemplos, passa limpa. Por isso este
 doc não entra na lista de prosa travada por `tests/run.sh`.

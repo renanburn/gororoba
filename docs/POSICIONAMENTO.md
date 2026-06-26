@@ -11,7 +11,7 @@ listas de tokens e dois padrões com expressão regular (paralelismo negativo e
 gerundismo). Não escondo isso. O valor não está em fingir sofisticação que não tem.
 Está em duas coisas que o regex sozinho não dá:
 
-1. O recorte. A lista de tells foi escolhida pra pegar slop sem pegar voz. Qualquer um
+1. O recorte. A lista de marcas foi escolhida pra pegar slop sem pegar voz. Qualquer um
    escreve regex num sábado. O trabalho é decidir o que entra e o que fica de fora sem
    virar uma ferramenta que pune quem escreve simples.
 2. O anteparo de teste. `tests/voz-limpa.md` trava o regex pra ele não vazar pra cima
@@ -29,7 +29,7 @@ Existem, e o projeto trata eles como o risco principal, não como detalhe. Três
 - Os níveis de severidade. Travessão e paralelismo negativo são `suggestion`, não
   `error`. O linter sugere, não reprova. Você decide.
 - O fixture anti-viés. `tests/voz-limpa.md` é um texto de voz real (mineirês, fala
-  falada, frase curta) que tem que passar com zero alerta. O CI quebra se algum tell
+  falada, frase curta) que tem que passar com zero alerta. O CI quebra se alguma marca
   vazar pra cima dele. Roda `bash tests/run.sh` e confere.
 - O canal de reporte. Tem um template de issue só pra falso-positivo. Marcou voz
   legítima como slop? Abre lá. O caso vira anti-fixture e entra no teste pra não voltar.
@@ -50,7 +50,7 @@ Não. É o contrário, e a diferença é o ponto inteiro do projeto.
 
 Os detectores de autoria (GPTZero, Turnitin AI) respondem "quem escreveu?". Erram
 contra quem escreve simples e contra quem não é nativo, a ponto de universidades
-desligarem eles. O gororoba responde outra pergunta: "este texto tem tell de slop?".
+desligarem eles. O gororoba responde outra pergunta: "este texto tem marca de slop?".
 Slop é propriedade do texto, medível e acionável. Autoria não é.
 
 Consequência prática: IA bem usada sai limpa aqui, e humano escrevendo genérico leva
