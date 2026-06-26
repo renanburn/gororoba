@@ -70,6 +70,19 @@ identificável. Registrar a `fonte` exata (corpus + id/URL) em toda linha.
   dois resultados são publicáveis.
 - Anonimizar antes de versionar. Sem dado pessoal, sem trecho que identifique alguém.
 
+## Eixos guardados (depois da v0)
+
+A v0 fecha com os 3 eixos do [`guia-anotacao.md`](guia-anotacao.md). Dois eixos já têm
+desenho, esperando a v0 ficar sólida antes de entrar. Cada um nasce com pergunta e
+dataset próprios, e não atrasa o benchmark dos 113.
+
+- **Propaganda/hype (v0.2):** regra pronta em `deferred/Hype.yml` (19 sinais validados),
+  vira eixo separado. O `seo-generico` deste plano é o material que alimenta esse eixo.
+- **Prosódia (v0.3):** defeito sonoro e rítmico não intencional (cacófato, eco,
+  monotonia de cadência, colisão). Rascunho de anotação em
+  [`guia-anotacao-prosodia.md`](guia-anotacao-prosodia.md), com piloto próprio de 15 e
+  anteparo poético. Entra só depois dos 113 fecharem, não antes.
+
 ## Ordem de trabalho
 
 1. Ler o catálogo `ajdavidl/Portuguese-NLP` e mapear o que serve.
