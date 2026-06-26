@@ -28,10 +28,10 @@ Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por t
 Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada sinal, diz o porquê, devolve gostosinho. Os alertas abaixo são a saída real do linter, não maquiagem.
 
 <p align="center">
-  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para transformar uma gororoba num texto requentado, e o Claude lista os quatro sinais (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
+  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para passar o gororoba num texto requentado, e o Claude lista os quatro sinais (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
 </p>
 
-Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) e mostra o mesmo via CLI.
+Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) mostra o mesmo via CLI.
 
 ## Antes e depois
 
