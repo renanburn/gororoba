@@ -5,7 +5,7 @@
 <h1 align="center">gororoba</h1>
 
 <p align="center">
-  Linter de voz pro português brasileiro. Aponta onde teu texto virou gororoba, igual o ESLint aponta erro no código.
+  Linter de voz pro português brasileiro. Sinaliza onde teu texto virou gororoba, tipo o ESLint aponta erro no código.
 </p>
 
 <p align="center">
@@ -17,25 +17,25 @@
 
 ---
 
-**gororoba** é gíria pra comida feita sem cuidado: sobra requentada, mistura sem gosto, rango que ninguém quer no prato. É o nome certo pro texto que ninguém quer ler: genérico, requentado, traduzido no muque, sem tempero.
+**gororoba** é gíria pra comida feita sem cuidado: sobra requentada, mistura sem gosto, rango que ninguém quer no prato. É o nome certo pro texto que ninguém quer ler: genérico, requentado, traduzido na tora, sem tempero.
 
 Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por trecho. Aí você tempera e serve melhor. Não dá nota, não acusa ninguém: aponta o ponto exato e o porquê, pra você decidir.
 
-**Não detecta autoria de IA.** Ela diz "isto tem 3 conectivos de tradução e 2 de voz passiva", não "isto foi escrito por máquina".
+**Não é detector de autoria de IA.** Nosso linter diz "isto tem 3 conectivos de tradução e 2 de voz passiva", não "isto foi escrito por máquina".
 
 ## Veja rodando
 
-Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada sinal, diz o porquê, devolve temperado. Os alertas abaixo são a saída real do linter, não maquiagem.
+Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada sinal, diz o porquê, devolve gostosinho. Os alertas abaixo são a saída real do linter, não maquiagem.
 
 <p align="center">
-  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para passar o gororoba num texto requentado, e o Claude lista os quatro sinais (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
+  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para transformar uma gororoba num texto requentado, e o Claude lista os quatro sinais (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
 </p>
 
-Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) mostra o mesmo via CLI.
+Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) e mostra o mesmo via CLI.
 
 ## Antes e depois
 
-O mesmo recado, primeiro requentado, depois temperado. Entra gororoba:
+O mesmo recado, primeiro requentado, depois gostosinho. Entra o gororoba:
 
 ```text
 "Nos dias de hoje, o autoconhecimento importa mais do que nunca."
@@ -52,7 +52,7 @@ Sai com voz:
 ```
 
 O gororoba acende cinco sinais (duas aberturas de garganta limpa, um conectivo de
-tradução, uma voz passiva, um clichê). Você corta e serve melhor.
+tradução, uma voz passiva, um clichê). Você corta e escolhe o que serve melhor.
 
 ## O que é, e o que não é
 
@@ -61,7 +61,7 @@ escreve simples ou não é nativo, e foram desligados por várias universidades.
 foge disso de propósito. A pergunta aqui é "vale a pena ler?", não "quem escreveu?".
 Genericidade é medível e acionável. Autoria não é.
 
-Slop é propriedade do texto, não de quem segurou o teclado. Tem IA bem usada que sai
+Slop é propriedade do texto, não de quem apertou a tecla no teclado. Tem IA bem usada que sai
 limpa, e tem gente escrevendo gororoba pura sem máquina nenhuma.
 
 ## Roda em 3 linhas
