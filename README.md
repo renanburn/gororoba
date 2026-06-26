@@ -25,9 +25,13 @@ Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por t
 
 ## Veja rodando
 
+Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada tell, diz o porquê, devolve temperado. Os alertas abaixo são a saída real do linter, não maquiagem.
+
 <p align="center">
-  <img src="assets/demo.gif" alt="No terminal, o gororoba aponta os trechos requentados de um texto e a fala brasileira passa limpa" width="760">
+  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para passar o gororoba num texto requentado, e o Claude lista os quatro tells (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
 </p>
+
+Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) mostra o mesmo via CLI.
 
 ## Antes e depois
 
@@ -68,12 +72,12 @@ git clone https://github.com/renanburn/gororoba && cd gororoba
 vale tests/gororoba.md
 ```
 
-Saída:
+Saída (trecho real, são 23 alertas no total):
 
 ```
-[conectivo-traducao] 'vale ressaltar que': conectivo de tradução.
-[voz-passiva] 'foi observado': voz passiva ou impessoal.
-[cliche-ia] 'Ótima pergunta': clichê de IA. Corta.
+[cliche-ia] 'No mundo de hoje': abertura de garganta limpa. Vai direto na informação.
+[conectivo-traducao] 'vale ressaltar que': conectivo de tradução. Começa pela informação.
+[voz-passiva] 'foi observado': voz passiva ou impessoal. Põe sujeito, voz ativa.
 ```
 
 ## Os 3 eixos da v0
