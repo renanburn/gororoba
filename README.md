@@ -34,15 +34,17 @@ Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por t
 O mesmo recado, primeiro requentado, depois temperado. Entra gororoba:
 
 ```text
-Vale ressaltar que a reunião foi produtiva. Nesse sentido, foi observado um
-avanço. Ótima pergunta sobre os próximos passos.
+"Vale ressaltar que a reunião foi produtiva."
+"Nesse sentido, foi observado um avanço."
+"Ótima pergunta sobre os próximos passos."
 ```
 
 Sai com voz:
 
 ```text
-A reunião rendeu. A gente avançou no período. Boa pergunta: vamos aos próximos
-passos.
+"A reunião rendeu."
+"A gente avançou no período."
+"Boa pergunta: vamos aos próximos passos."
 ```
 
 O gororoba acende os quatro tells (dois conectivos de tradução, uma voz passiva, um
@@ -98,10 +100,20 @@ vale tests/voz-limpa.md
 
 ## Estado honesto
 
-Esta é a Camada 2, o linter. Funciona e roda em CI hoje. A Camada 1, o dataset público
-anotado por dois humanos com concordância (kappa) medida, ainda está em construção. Sem
-ela, isto é uma régua útil; com ela, vira uma régua provada. Não vou chamar de
-"benchmark" antes de ter o kappa na mão.
+Esta é a Camada 2, o linter. Funciona e roda em CI hoje.
+
+A metodologia de anotação já passou num **piloto de 15 trechos**: dois anotadores
+independentes, kappa de Cohen de **0,80** (conectivo), **1,00** (voz passiva) e **0,81**
+(clichê), concordância quase perfeita na escala de Landis-Koch. A evidência crua, as três
+rodadas e o diagnóstico estão versionados em [`dataset/piloto/rodadas/`](dataset/piloto/rodadas/),
+pra qualquer um auditar.
+
+O que falta é a Camada 1: escalar essa anotação pros **113 trechos já coletados** (fonte
+verificável, zero inventado) e cravar o kappa do benchmark público. Os 113 estão no repo
+com os scores em branco, e a anotação roda em aberto: dá pra acompanhar e contribuir.
+
+Até lá, sendo honesto: **régua validada em piloto, benchmark em anotação aberta.** Não vou
+chamar de "benchmark" antes de ter o kappa dos 113 na mão.
 
 ## Para o cético
 
