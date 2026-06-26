@@ -17,7 +17,7 @@ anteparo de tests/voz-limpa.md: fala regional e popular passa limpo.
 
 ## Caminho 2: a IA aplica a régua de cabeça (rápido, aproximado)
 
-Se é chat puro (Claude no navegador, ChatGPT, Gemini, o que for), a IA não roda o Vale. Ela aplica a régua como prompt. Funciona pra experimentar, mas é uma aproximação: pode deixar uma passar ou apontar uma a mais. Pra resultado que você cita, roda o Caminho 1.
+Se é chat puro (Claude no navegador, ChatGPT, Gemini, o que for), a IA não roda o Vale. Ela aplica a régua como prompt. Funciona pra experimentar, mas é uma aproximação: pode deixar um passar ou apontar um a mais. Pra resultado que você cita, roda o Caminho 1.
 
 Cola o prompt abaixo, e embaixo dele o teu texto.
 

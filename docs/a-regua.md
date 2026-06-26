@@ -8,7 +8,7 @@ de uma existente começa por aqui.
 
 Texto bom em português soa como alguém de verdade falando, não como artigo traduzido.
 
-A marca número um de texto requentado não é erro de gramática. É o contrário: gramática
+O sinal número um de texto requentado não é erro de gramática. É o contrário: gramática
 limpa demais, conectivo demais, e o ritmo de quem nunca abriu a boca pra dizer aquilo. O
 slop é fluente e vazio ao mesmo tempo. Por isso a pergunta da régua é "vale a pena ler?",
 não "quem escreveu?". A régua persegue o que um brasileiro real não diria em voz alta.
@@ -19,7 +19,7 @@ não "quem escreveu?". A régua persegue o que um brasileiro real não diria em 
 
 Conectivo de garganta limpa que abre a frase sem entregar informação: "vale ressaltar
 que", "nesse sentido", "dito isso", "em suma", "diante do exposto". É a muleta de quem
-precisa de uma rampa antes de dizer qualquer coisa, marca de redação de escola e de texto
+precisa de uma rampa antes de dizer qualquer coisa, sinal de redação de escola e de texto
 vertido do inglês.
 
 Por que é gororoba: a frase já funcionaria sem ele. Corte o conectivo e a informação
@@ -82,6 +82,6 @@ qualquer um usar no próprio texto.
 ---
 
 Nota: rodar `vale docs/a-regua.md` acende vários alertas. Todos caem dentro dos exemplos,
-onde as marcas estão citadas de propósito pra ensinar o que cada eixo pega, igual o fixture
+onde os sinais estão citados de propósito pra ensinar o que cada eixo pega, igual o fixture
 `tests/gororoba.md`. A prosa explicativa, fora dos exemplos, passa limpa. Por isso este
 doc não entra na lista de prosa travada por `tests/run.sh`.

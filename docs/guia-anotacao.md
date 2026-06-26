@@ -13,7 +13,7 @@ tradução zero e voz passiva forte. Mede cada coisa separada.
 ## Os 3 eixos
 
 ### 1. conectivo-de-tradução (`conectivo_score`)
-Conectivo de garganta limpa que abre frase sem entregar informação. Marca de texto
+Conectivo de garganta limpa que abre frase sem entregar informação. Sinal de texto
 vertido do inglês ou de IA que precisa de transição antes de dizer qualquer coisa.
 
 - Pega: "vale ressaltar que", "nesse sentido", "dito isso", "em suma", "ademais",
@@ -63,9 +63,9 @@ próprio na v0.2 (regra guardada em `deferred/Hype.yml`).
 
 | Score | Significa | Critério |
 |---|---|---|
-| **0** | ausente | nenhuma marca do eixo, ou só uso legítimo (passiva técnica, conjunção viva) |
-| **1** | presente leve | uma marca isolada e discreta que não domina o trecho |
-| **2** | presente forte | duas ou mais marcas, ou uma que define o tom do trecho |
+| **0** | ausente | nenhum sinal do eixo, ou só uso legítimo (passiva técnica, conjunção viva) |
+| **1** | presente leve | um sinal isolado e discreto que não domina o trecho |
+| **2** | presente forte | dois ou mais sinais, ou um que define o tom do trecho |
 
 Por que 3 níveis e não binário: binário (tem/não tem) joga fora a diferença entre
 "um deslize" e "trecho encharcado", que é justo a informação que o linter precisa
@@ -123,7 +123,7 @@ pra calibrar as duas cabeças, não pra contar como dado.
 ## Nota sobre a régua neste guia
 
 Os alertas que o `vale docs/guia-anotacao.md` acusa são todos dentro das tabelas de
-definição e dos blocos de exemplo, onde as marcas estão citadas de propósito pra
+definição e dos blocos de exemplo, onde os sinais estão citados de propósito pra
 ensinar o que cada eixo pega. É o mesmo papel do fixture `tests/gororoba.md`: um texto
 que mostra a doença não está doente. A prosa do guia (tudo fora de exemplo) passa
 limpa. Confere rodando o vale e olhando onde cada hit cai: se algum cair fora de

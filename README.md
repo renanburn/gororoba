@@ -25,10 +25,10 @@ Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por t
 
 ## Veja rodando
 
-Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada marca, diz o porquê, devolve temperado. Os alertas abaixo são a saída real do linter, não maquiagem.
+Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada sinal, diz o porquê, devolve temperado. Os alertas abaixo são a saída real do linter, não maquiagem.
 
 <p align="center">
-  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para passar o gororoba num texto requentado, e o Claude lista as quatro marcas (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
+  <img src="assets/demo-conversa.png" alt="Conversa dentro do Claude Code: o usuário pede para passar o gororoba num texto requentado, e o Claude lista os quatro sinais (dois conectivos de tradução, uma voz passiva, um clichê de IA) e devolve a versão temperada" width="820">
 </p>
 
 Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) mostra o mesmo via CLI.
@@ -51,7 +51,7 @@ Sai com voz:
 "Esse curso vira teu ano. Falo por quem já passou por ele."
 ```
 
-O gororoba acende cinco marcas (duas aberturas de garganta limpa, um conectivo de
+O gororoba acende cinco sinais (duas aberturas de garganta limpa, um conectivo de
 tradução, uma voz passiva, um clichê). Você corta e serve melhor.
 
 ## O que é, e o que não é
