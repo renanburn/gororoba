@@ -7,8 +7,8 @@ gente jurou não ser: é falso positivo, é bug. Este arquivo trava isso.
 Os exemplos são autorais, escritos pra soar como fala real, calibrados por estudos de
 dialetologia e por corpora de fala espontânea (C-ORAL-BRASIL, NURC, ALiB). Não são
 citação literal de ninguém. A régua é uma só: um sinal por frase, o sotaque mora na
-construção, não na quantidade de gíria. Soou de novela pro teu ouvido nativo? É bug:
-manda a fala certa do teu canto (ver CONTRIBUTING).
+construção, não na quantidade de gíria. Soou de novela pro seu ouvido nativo? É bug:
+manda a fala certa do seu canto (ver CONTRIBUTING).
 
 ## Prosa direta (sem sotaque marcado)
 

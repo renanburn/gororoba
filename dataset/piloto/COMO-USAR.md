@@ -4,8 +4,8 @@
 
 ## Passo a passo
 
-1. **Você:** abre `anotador.html` no navegador (duplo-clique, funciona offline). Escreve teu nome, responde as 3 perguntas de cada texto (Não / Um pouco / Sim), clica **Salvar minha resposta**. Baixa um arquivo `resposta-<seunome>.csv`.
-2. **Manda o `anotador.html` pro teu amigo** (WhatsApp, e-mail). Ele abre no navegador dele, faz igual, te devolve o arquivo dele.
+1. **Você:** abre `anotador.html` no navegador (duplo-clique, funciona offline). Escreve seu nome, responde as 3 perguntas de cada texto (Não / Um pouco / Sim), clica **Salvar minha resposta**. Baixa um arquivo `resposta-<seunome>.csv`.
+2. **Manda o `anotador.html` pro seu amigo** (WhatsApp, e-mail). Ele abre no navegador dele, faz igual, te devolve o arquivo dele.
 3. **Cada um sozinho.** Sem combinar nota, sem ver a do outro antes de salvar. É isso que faz o teste valer.
 4. **Junta:** na mesma página, lá embaixo em "Vocês deram as mesmas notas?", carrega os 2 arquivos. Sai na hora em quantos textos vocês bateram, por pergunta.
 

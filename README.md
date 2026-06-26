@@ -5,7 +5,7 @@
 <h1 align="center">gororoba</h1>
 
 <p align="center">
-  Linter de voz pro português brasileiro. Sinaliza onde teu texto virou gororoba, tipo o ESLint aponta erro no código.
+  Linter de voz pro português brasileiro. Sinaliza onde seu texto virou gororoba, tipo o ESLint aponta erro no código.
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 
 **gororoba** é gíria pra comida feita sem cuidado: sobra requentada, mistura sem gosto, rango que ninguém quer no prato. É o nome certo pro texto que ninguém quer ler: genérico, requentado, traduzido na tora, sem tempero.
 
-Esta ferramenta prova o teu texto e mostra onde ele virou gororoba, trecho por trecho. Aí você tempera e serve melhor. Não dá nota, não acusa ninguém: aponta o ponto exato e o porquê, pra você decidir.
+Esta ferramenta prova o seu texto e mostra onde ele virou gororoba, trecho por trecho. Aí você tempera e serve melhor. Não dá nota, não acusa ninguém: aponta o ponto exato e o porquê, pra você decidir.
 
 **Não é detector de autoria de IA.** Nosso linter diz "isto tem 3 conectivos de tradução e 2 de voz passiva", não "isto foi escrito por máquina".
 
@@ -48,7 +48,7 @@ Sai com voz:
 ```text
 "Hoje em dia a gente cuida pouco de se conhecer, e isso cobra caro."
 "Montei o método com gente que faz isso há vinte anos."
-"Esse curso vira teu ano. Falo por quem já passou por ele."
+"Esse curso vira seu ano. Falo por quem já passou por ele."
 ```
 
 O gororoba acende cinco sinais (duas aberturas de garganta limpa, um conectivo de

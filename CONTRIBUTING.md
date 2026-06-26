@@ -42,7 +42,7 @@ Se `bash tests/run.sh` terminar com "OK: ruleset validado.", está verde.
 1. Abre uma issue do tipo "regra-nova" antes do PR, descrevendo o padrão de slop e em
    qual dos 3 eixos ele cai (`conectivo-traducao`, `voz-passiva`, `cliche-ia`).
 2. Escolhe o eixo certo. Os arquivos de regra ficam em `styles/Gororoba/`. Quase tudo é
-   `extends: existence` com uma lista de `tokens`. Adiciona teu sinal na regra do eixo,
+   `extends: existence` com uma lista de `tokens`. Adiciona seu sinal na regra do eixo,
    ou cria um arquivo novo se for um sub-padrão distinto.
 3. Pensa na severidade. `error` é pra clichê de IA puro, que não tem defesa. `warning`
    é pro que quase sempre é slop mas tem exceção. `suggestion` é pro que depende de
@@ -52,20 +52,20 @@ Se `bash tests/run.sh` terminar com "OK: ruleset validado.", está verde.
 5. Roda `bash tests/run.sh`. Tem que passar.
 6. Abre o PR e preenche o template, que cobra o par fixture + anti-fixture.
 
-Critério de aceite de uma regra: ela pega slop real e não toca voz legítima. Se o teu
-anti-fixture for fraco (não cobre o caso de voz que mais se parece com o teu slop), eu
+Critério de aceite de uma regra: ela pega slop real e não toca voz legítima. Se o seu
+anti-fixture for fraco (não cobre o caso de voz que mais se parece com o seu slop), eu
 vou pedir um mais duro antes do merge.
 
 ## Reportar um falso-positivo
 
 Marcou voz legítima como slop? Esse é o bug mais grave que o projeto pode ter. Abre uma
-issue do tipo "falso-positivo" com o trecho exato e qual regra disparou (`vale --output=line teu-arquivo.md`
+issue do tipo "falso-positivo" com o trecho exato e qual regra disparou (`vale --output=line seu-arquivo.md`
 mostra a regra). O trecho vira anti-fixture em `tests/voz-limpa.md`, a regra é ajustada
 pra parar de vazar, e o teste trava pra não voltar.
 
 O anti-fixture é organizado por localidade, e a cobertura regional ainda é uma semente
-escrita por quem não é nativo de todo canto. Falar do teu lugar é a melhor coisa que tu
-pode fazer aqui: manda fala de verdade da tua região, sem caricatura de novela. Mineirês,
+escrita por quem não é nativo de todo canto. Falar do seu lugar é a melhor coisa que você
+pode fazer aqui: manda fala de verdade da sua região, sem caricatura de novela. Mineirês,
 baianês, gauchês, paraense, o que for. Quanto mais sotaque legítimo o teste guarda, menos
 chance do linter confundir voz com slop.
 
@@ -90,7 +90,7 @@ moat, então não fazemos isso.
 ## Voz dos textos do projeto
 
 A ironia do projeto: ele detecta o próprio slop. Todo `.md` que você adicionar deve
-passar na régua. Roda `vale teu-arquivo.md` e limpa os alertas que caírem fora de bloco
+passar na régua. Roda `vale seu-arquivo.md` e limpa os alertas que caírem fora de bloco
 de exemplo. Sinais citados dentro de tabela de definição ou de bloco de exemplo são
 esperados (o fixture mostra a doença sem estar doente). Sinal na prosa corrida é pra
 limpar.

@@ -204,7 +204,7 @@ function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;"
 $("#who").oninput = e => { who = e.target.value.trim(); load(); render(); };
 
 $("#exp").onclick = () => {
-  if(!who){ msg("Escreve teu nome ali em cima antes de salvar."); return; }
+  if(!who){ msg("Escreve seu nome ali em cima antes de salvar."); return; }
   const done = TRECHOS.filter(t => { const s=state[t.id]||{}; return s.c!=null&&s.v!=null&&s.l!=null; }).length;
   if(done < TRECHOS.length && !confirm("Faltam "+(TRECHOS.length-done)+" texto(s). Salvar mesmo assim?")) return;
   const rows = [["id","trecho","conectivo_score","vozpassiva_score","cliche_score","anotador","notas"]];
@@ -213,7 +213,7 @@ $("#exp").onclick = () => {
   dl("resposta-"+who.replace(/[^a-z0-9_-]/gi,"_")+".csv", csv);
   msg("Salvo. Manda esse arquivo pro outro (ou junta os dois ali embaixo).");
 };
-$("#clr").onclick = () => { if(confirm("Apagar tuas respostas deste navegador?")){ localStorage.removeItem(key()); load(); render(); } };
+$("#clr").onclick = () => { if(confirm("Apagar suas respostas deste navegador?")){ localStorage.removeItem(key()); load(); render(); } };
 
 function csvCell(v){ v=String(v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 function dl(name, text){ const b=new Blob([text],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=name; a.click(); }

@@ -4,9 +4,9 @@ Tem dois caminhos. Um é rigoroso e reproduzível. O outro é rápido e aproxima
 
 ## Caminho 1: a IA roda o linter de verdade (rigoroso)
 
-Se a tua IA tem terminal (Claude Code, Cursor, Aider, qualquer agente com shell), ela clona o repo e roda o Vale. O resultado é determinístico: mesma entrada, mesma saída, sempre. É o gororoba de fato.
+Se a sua IA tem terminal (Claude Code, Cursor, Aider, qualquer agente com shell), ela clona o repo e roda o Vale. O resultado é determinístico: mesma entrada, mesma saída, sempre. É o gororoba de fato.
 
-Cola isto pra tua IA:
+Cola isto pra sua IA:
 
 ```
 Clona github.com/renanburn/gororoba, instala o Vale (brew install vale) e roda
@@ -19,7 +19,7 @@ anteparo de tests/voz-limpa.md: fala regional e popular passa limpo.
 
 Se é chat puro (Claude no navegador, ChatGPT, Gemini, o que for), a IA não roda o Vale. Ela aplica a régua como prompt. Funciona pra experimentar, mas é uma aproximação: pode deixar um passar ou apontar um a mais. Pra resultado que você cita, roda o Caminho 1.
 
-Cola o prompt abaixo, e embaixo dele o teu texto.
+Cola o prompt abaixo, e embaixo dele o seu texto.
 
 ### O prompt (copia tudo)
 
