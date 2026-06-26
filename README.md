@@ -38,21 +38,21 @@ Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) mostra o m
 O mesmo recado, primeiro requentado, depois temperado. Entra gororoba:
 
 ```text
-"Vale ressaltar que a reunião foi produtiva."
-"Nesse sentido, foi observado um avanço."
-"Ótima pergunta sobre os próximos passos."
+"Nos dias de hoje, o autoconhecimento importa mais do que nunca."
+"É importante destacar que o método foi elaborado por especialistas."
+"Sem dúvida, este curso é um divisor de águas na sua vida."
 ```
 
 Sai com voz:
 
 ```text
-"A reunião rendeu."
-"A gente avançou no período."
-"Boa pergunta: vamos aos próximos passos."
+"Hoje em dia a gente cuida pouco de se conhecer, e isso cobra caro."
+"Montei o método com gente que faz isso há vinte anos."
+"Esse curso vira teu ano. Falo por quem já passou por ele."
 ```
 
-O gororoba acende os quatro tells (dois conectivos de tradução, uma voz passiva, um
-clichê de abertura). Você corta e serve melhor.
+O gororoba acende cinco tells (duas aberturas de garganta limpa, um conectivo de
+tradução, uma voz passiva, um clichê). Você corta e serve melhor.
 
 ## O que é, e o que não é
 
