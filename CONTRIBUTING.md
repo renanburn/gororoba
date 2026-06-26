@@ -5,6 +5,18 @@ sinal de slop que eu não conheço, e cada uma conhece um jeito de falar legíti
 linter não pode atropelar. Esta página diz como propor regra, como reportar erro e como
 ajudar a construir o dataset.
 
+## Forkou? É assim que o projeto aprende com você
+
+Um fork é uma cópia na sua conta, e o gororoba não vê o que você mexe lá. O projeto
+aprende com você de um jeito só: você devolve o trabalho, por issue ou PR. Não tem
+aprendizado automático, e é de propósito. A régua é determinística, humano revisa e
+mescla.
+
+O que mais vale é a fala do seu canto. Rodou o linter e ele atropelou uma fala legítima
+da sua região? Isso é falso-positivo, o bug mais grave do projeto. Manda (ver
+[Reportar um falso-positivo](#reportar-um-falso-positivo)): vira anti-fixture, trava o
+viés, e o linter fica menos burro pra quem fala como você.
+
 ## A regra dura: par fixture + anti-fixture
 
 Toda regra nova proposta precisa vir com os dois:
