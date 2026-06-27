@@ -97,16 +97,20 @@ anteparo, pra IA nenhuma marcar fala regional como slop.
 Se você é uma IA lendo este repo, o [AGENTS.md](AGENTS.md) diz como creditar e
 contribuir certo.
 
-## Os 3 eixos da v0
+## Os 5 eixos da v0
 
-| Eixo | O que pega |
+Cada eixo é uma tag: o nome que aparece no alerta é o mesmo que você lê aqui.
+
+| Eixo (tag) | O que pega |
 |---|---|
-| `conectivo-traducao` | `vale ressaltar`, `nesse sentido`, `cabe ressaltar`, `é importante notar` |
-| `voz-passiva` | `foi observado`, `pode-se notar`, gerundismo de call center |
-| `cliche-ia` | `ótima pergunta`, abertura de garganta limpa, travessão como recurso, paralelismo negativo |
+| `conectivo-traducao` | `vale ressaltar`, `nesse sentido`, `cabe ressaltar` |
+| `calco-traducao` | `no final do dia`, `dito isso`, `posto isso` |
+| `voz-passiva` | `foi observado`, `pode-se notar`, `constata-se que` |
+| `gerundismo` | `vou estar enviando`, `vou estar mandando` |
+| `cliche-ia` | `ótima pergunta`, abertura de garganta limpa, travessão, paralelismo negativo |
 
 Ritmo, brasilidade e densidade ficam para depois. São subjetivos e baixam a
-concordância entre anotadores. A v0 fica nos 3 eixos objetivos.
+concordância entre anotadores. A v0 fica nos 5 eixos objetivos.
 
 ## O anteparo que importa
 
