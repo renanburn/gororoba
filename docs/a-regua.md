@@ -17,31 +17,40 @@ não "quem escreveu?". A régua persegue o que um brasileiro real não diria em 
 
 ### 1. Conectivo de tradução
 
-Conectivo de garganta limpa que abre a frase sem entregar informação: "vale ressaltar
-que", "nesse sentido", "dito isso", "em suma", "diante do exposto". É a muleta de quem
-precisa de uma rampa antes de dizer qualquer coisa, sinal de redação de escola e de texto
-vertido do inglês.
+Muleta de abertura redundante que abre a frase sem entregar informação: `vale ressaltar
+que`, `é importante notar que`, `nesse sentido`. É a rampa de quem precisa aquecer antes
+de dizer qualquer coisa, sinal de redação de escola e de texto vertido do inglês.
 
 Por que é gororoba: a frase já funcionaria sem ele. Corte o conectivo e a informação
-chega mais rápido e mais forte. O que carrega sentido real ("porque", "mas", "então" numa
+chega mais rápido e mais forte. O que carrega sentido real (`porque`, `mas`, `então` numa
 fala viva) não cai aqui; conjunção comum não é slop. O alvo é o enfeite que adia o
 conteúdo.
 
+Escopo honesto: este eixo marca só a muleta de abertura redundante. Coesivo culto de
+registro formal, como `dessa forma`, `em suma` e `diante do exposto`, saiu da régua de
+propósito. É português legítimo de texto formal, não tradução robótica, e marcar isso
+seria atropelar registro: o mesmo erro que a régua caça nos detectores de autoria.
+
 ### 2. Voz passiva
 
-Passiva e impessoal que apaga quem fez: "foi observado", "pode-se notar", "constata-se
-que", mais o gerundismo de call center ("vou estar enviando"). É a voz de quem não quer
-dizer o sujeito, de relatório que foge da responsabilidade.
+Fórmula impessoal e burocrática que apaga quem fez: `foi observado`, `pode-se notar`,
+`constata-se que`, mais o gerundismo de call center (`vou estar enviando`). É a voz de
+quem não quer dizer o sujeito, de relatório que foge da responsabilidade.
 
-Por que é gororoba: esconde o agente e esfria o texto. "Foi observado que dá pra melhorar"
-vira "vi que dá pra melhorar", e aí aparece gente. A passiva legítima, onde o agente não
-importa mesmo ("a lei foi sancionada em 1988"), não é alvo. O julgamento separa as duas:
-passiva pra fugir de quem fez é slop, passiva técnica correta não é.
+Por que é gororoba: esconde o agente e esfria o texto. `Foi observado que dá pra melhorar`
+vira "vi que dá pra melhorar", e aí aparece gente.
+
+Escopo honesto: este eixo é um blocklist de fórmulas impessoais e burocráticas conhecidas,
+não um parser de voz passiva. Ele não disseca a gramática da frase: bate numa lista fechada
+de praxes de relatório. Por isso a passiva legítima de agente desconhecido, tipo "o corpo
+foi encontrado" ou "a lei foi sancionada em 1988", não é alvo, e o linter nem teria como
+pegar, porque essas construções não estão na lista. O recorte é proposital: caçar a praxe
+burocrática sem fingir que a régua entende sintaxe.
 
 ### 3. Clichê de IA
 
-Frase pronta que todo assistente solta e bordão de conversa traduzido: "ótima pergunta",
-"no mundo de hoje", "mais do que nunca", o paralelismo negativo "não é X, é Y", o
+Frase pronta que todo assistente solta e bordão de conversa traduzido: `ótima pergunta`,
+`no mundo de hoje`, `mais do que nunca`, o paralelismo negativo "não é X, é Y", o
 travessão usado de efeito, e o translationese tipo "no fim do dia" ou "a milha extra". É o
 som da máquina sendo educada ou do blog genérico.
 

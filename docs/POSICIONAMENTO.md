@@ -76,7 +76,7 @@ Resumo do estado, sem maquiagem:
 | Camada | O que é | Estado |
 |---|---|---|
 | Camada 2 | o linter Vale, 7 eixos, CI | pronto, roda hoje |
-| Camada 1 | dataset anotado + kappa por eixo | em construção, 0 trechos |
+| Camada 1 | dataset anotado + kappa por eixo | em construção, 113 trechos coletados, 0 anotados |
 
 ## "De onde vem isso? É original?"
 

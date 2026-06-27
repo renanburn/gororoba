@@ -1,0 +1,9 @@
+extends: existence
+message: "[calco-traducao] '%s': calco de tradução do inglês. Diz direto em português."
+level: suggestion
+ignorecase: true
+tokens:
+  - 'no final do dia'
+  - 'dito isso'
+  - 'posto isso'
+  - 'ter dito isso'
