@@ -68,3 +68,13 @@ Tu vais à festa hoje? Já fizeste o que eu pedi? Aonde é que tu vais agora?
 ## Goiás
 
 Bão demais da conta esse trem. Aneim, não dou conta disso não. Vou lá amanhã, então.
+
+## Registro formal (deve passar)
+
+Diante disso, conclui-se o argumento central sem rodeio. Dessa forma, em suma, os
+resultados se sustentam pela coerência interna do raciocínio. Não obstante as ressalvas
+apresentadas, ademais, o método se mantém íntegro ao longo de todo o percurso.
+
+Sendo assim, diante do exposto, a hipótese resiste ao escrutínio. Em síntese, outrossim,
+cada premissa encontra respaldo na evidência reunida. Com efeito, em última análise,
+desta forma o raciocínio fecha sem deixar brecha.

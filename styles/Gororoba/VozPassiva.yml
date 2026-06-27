@@ -1,5 +1,5 @@
 extends: existence
-message: "[voz-passiva] '%s': voz passiva ou impessoal. Põe sujeito, voz ativa."
+message: "[voz-passiva] '%s': fórmula impessoal de praxe burocrática. Põe sujeito, voz ativa."
 level: warning
 ignorecase: true
 tokens:

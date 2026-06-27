@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <strong>Começa meu, vira nosso.</strong> Seu sotaque vira teste, com seu nome no crédito, e o corretor te respeita pra sempre.
+</p>
+
+<p align="center">
   <a href="https://github.com/renanburn/gororoba/actions/workflows/vale.yml"><img src="https://github.com/renanburn/gororoba/actions/workflows/vale.yml/badge.svg" alt="CI Vale"></a>
   <img src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue" alt="Licença MIT">
   <img src="https://img.shields.io/badge/voz-pt--BR-009c3b" alt="pt-BR">
@@ -72,13 +76,15 @@ git clone https://github.com/renanburn/gororoba && cd gororoba
 vale tests/gororoba.md
 ```
 
-Saída (trecho real, são 23 alertas no total):
+Saída (trecho real, são 19 alertas no total):
 
 ```
 [cliche-ia] 'No mundo de hoje': abertura de garganta limpa. Vai direto na informação.
 [conectivo-traducao] 'vale ressaltar que': conectivo de tradução. Começa pela informação.
-[voz-passiva] 'foi observado': voz passiva ou impessoal. Põe sujeito, voz ativa.
+[voz-passiva] 'foi observado': fórmula impessoal de praxe burocrática. Põe sujeito, voz ativa.
 ```
+
+> Nota: o `vale` sozinho roda só com ele mesmo. A validação cheia (`bash tests/run.sh`, a que o CI roda) conta os alertas com `python3`, então tenha o `python3` à mão pra rodar a suíte.
 
 ## Usar dentro de uma IA
 
@@ -95,7 +101,7 @@ contribuir certo.
 
 | Eixo | O que pega |
 |---|---|
-| `conectivo-traducao` | `vale ressaltar`, `nesse sentido`, `em suma`, `ademais` |
+| `conectivo-traducao` | `vale ressaltar`, `nesse sentido`, `cabe ressaltar`, `é importante notar` |
 | `voz-passiva` | `foi observado`, `pode-se notar`, gerundismo de call center |
 | `cliche-ia` | `ótima pergunta`, abertura de garganta limpa, travessão como recurso, paralelismo negativo |
 
@@ -124,8 +130,9 @@ rodadas e o diagnóstico estão versionados em [`dataset/piloto/rodadas/`](datas
 pra qualquer um auditar.
 
 O que falta é a Camada 1: escalar essa anotação pros **113 trechos já coletados** (fonte
-verificável, zero inventado) e cravar o kappa do benchmark público. Os 113 estão no repo
-com os scores em branco, e a anotação roda em aberto: dá pra acompanhar e contribuir.
+verificável, zero inventado) e cravar o kappa do benchmark público. São 113 trechos
+coletados, 0 anotados: estão no repo com os scores em branco, e a anotação roda em aberto,
+dá pra acompanhar e contribuir.
 
 Até lá, sendo honesto: **régua validada em piloto, benchmark em anotação aberta.** Não vou
 chamar de "benchmark" antes de ter o kappa dos 113 na mão.

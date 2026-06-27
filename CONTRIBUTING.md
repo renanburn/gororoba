@@ -49,6 +49,10 @@ bash tests/run.sh       # roda a validação inteira (o que o CI roda)
 
 Se `bash tests/run.sh` terminar com "OK: ruleset validado.", está verde.
 
+O `bash tests/run.sh` conta os alertas com `python3`, então precisa do `python3` instalado
+(já vem no macOS e na maioria das distros Linux). O `vale` puro, nos dois comandos acima,
+roda sem ele.
+
 ## Propor uma regra nova
 
 1. Abre uma issue do tipo "regra-nova" antes do PR, descrevendo o padrão de slop e em
@@ -84,7 +88,7 @@ chance do linter confundir voz com slop.
 ## Contribuir trecho anotado pro dataset (Camada 1)
 
 A Camada 1 é o dataset pt-BR de slop anotado por humanos, com kappa de Cohen. É o moat
-do projeto e está em construção (0 trechos). Como ajudar:
+do projeto e está em construção (113 trechos coletados, 0 anotados). Como ajudar:
 
 1. Lê `docs/plano-coleta.md` (de onde vem o material, balanceado em 7 classes de origem)
    e `docs/guia-anotacao.md` (como rotular, a escala 0/1/2, a política de desacordo).
