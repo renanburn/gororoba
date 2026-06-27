@@ -53,16 +53,20 @@ alerta. Isto é a saída real de `vale tests/voz-limpa.md`:
 A frase "Cê viu o trem que o sô falou, uai?" passa limpa. O CI quebra se algum sinal
 vazar pra cima dela. Isto roda a cada push, então não fica no campo da promessa.
 
-## Os 3 eixos da v0
+## Os 5 eixos da v0
 
-| Eixo | O que pega |
+Cada eixo é uma tag: o nome que aparece no alerta é o mesmo que você lê aqui.
+
+| Eixo (tag) | O que pega |
 |---|---|
-| `conectivo-traducao` | `vale ressaltar`, `nesse sentido`, `em suma`, `ademais` |
-| `voz-passiva` | `foi observado`, `pode-se notar`, gerundismo de call center |
-| `cliche-ia` | `ótima pergunta`, abertura de garganta limpa, travessão como recurso, paralelismo negativo |
+| `conectivo-traducao` | `vale ressaltar`, `nesse sentido`, `cabe ressaltar` |
+| `calco-traducao` | `no final do dia`, `dito isso`, `posto isso` |
+| `voz-passiva` | `foi observado`, `pode-se notar`, `constata-se que` |
+| `gerundismo` | `vou estar enviando`, `vou estar mandando` |
+| `cliche-ia` | `ótima pergunta`, abertura de garganta limpa, travessão, paralelismo negativo |
 
 Ritmo, brasilidade e densidade ficam pra depois. São subjetivos e baixam a concordância
-entre anotadores. A v0 fica nos 3 eixos objetivos.
+entre anotadores. A v0 fica nos 5 eixos objetivos.
 
 ## Estado honesto
 
@@ -73,7 +77,7 @@ antes de o kappa estar na mão.
 
 | Camada | O que é | Estado |
 |---|---|---|
-| Camada 2 | o linter Vale, 7 eixos, CI | pronto, roda hoje |
+| Camada 2 | o linter Vale, 5 eixos, CI | pronto, roda hoje |
 | Camada 1 | dataset anotado + kappa por eixo | em construção, 0 trechos |
 
 O cético tem um lugar pra cavar: o [posicionamento](docs/POSICIONAMENTO.md) responde de

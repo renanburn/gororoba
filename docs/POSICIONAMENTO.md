@@ -60,7 +60,7 @@ regra disparou, pra você corrigir ou ignorar.
 ## "Por que confiar nisso sem o kappa ainda?"
 
 Não confie como benchmark. Eu não chamo de benchmark, justamente porque o kappa não
-está medido. O que está pronto e roda hoje é a Camada 2: o linter, os 7 eixos, o CI
+está medido. O que está pronto e roda hoje é a Camada 2: o linter, os 5 eixos, o CI
 verde, os dois fixtures. Isso é uma régua útil, testável, que você roda no seu texto
 agora.
 
@@ -75,7 +75,7 @@ Resumo do estado, sem maquiagem:
 
 | Camada | O que é | Estado |
 |---|---|---|
-| Camada 2 | o linter Vale, 7 eixos, CI | pronto, roda hoje |
+| Camada 2 | o linter Vale, 5 eixos, CI | pronto, roda hoje |
 | Camada 1 | dataset anotado + kappa por eixo | em construção, 113 trechos coletados, 0 anotados |
 
 ## "De onde vem isso? É original?"
