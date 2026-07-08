@@ -72,8 +72,9 @@ identificável. Registrar a `fonte` exata (corpus + id/URL) em toda linha.
 
 ## Eixos guardados (depois da v0)
 
-A v0 fecha com os 3 eixos do [`guia-anotacao.md`](guia-anotacao.md). Dois eixos já têm
-desenho, esperando a v0 ficar sólida antes de entrar. Cada um nasce com pergunta e
+A v0 fecha com os 4 eixos do [`guia-anotacao.md`](guia-anotacao.md) (conectivo, voz
+passiva, clichê e alusão vaga; a alusão vaga entrou do StoryScope). Outros dois eixos já
+têm desenho, esperando a v0 ficar sólida antes de entrar. Cada um nasce com pergunta e
 dataset próprios, e não atrasa o benchmark dos 113.
 
 - **Propaganda/hype (v0.2):** regra pronta em `deferred/Hype.yml` (19 sinais validados),

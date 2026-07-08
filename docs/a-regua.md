@@ -1,6 +1,6 @@
 # A régua: por que cada eixo é gororoba
 
-Este documento explica o raciocínio por trás dos três eixos. O ruleset (em `styles/`)
+Este documento explica o raciocínio por trás dos quatro eixos. O ruleset (em `styles/`)
 diz o que a régua pega; aqui está o porquê. Quem quiser propor regra nova ou discordar
 de uma existente começa por aqui.
 
@@ -13,7 +13,7 @@ limpa demais, conectivo demais, e o ritmo de quem nunca abriu a boca pra dizer a
 slop é fluente e vazio ao mesmo tempo. Por isso a pergunta da régua é "vale a pena ler?",
 não "quem escreveu?". A régua persegue o que um brasileiro real não diria em voz alta.
 
-## Os três eixos, e o que cada um persegue
+## Os quatro eixos, e o que cada um persegue
 
 ### 1. Conectivo de tradução
 
@@ -60,6 +60,19 @@ impressão do que numa lista fechada, e foi o que mais custou a calibrar entre a
 humanos. Por isso a fronteira é dura: bordão de conversa cai aqui, conectivo formal cai no
 eixo 1.
 
+### 4. Alusão vaga
+
+Apelo a autoridade sem nome: `estudos mostram`, `especialistas afirmam`, `uma grande
+marca`. O texto invoca prova, marca ou referência e foge de dizer qual. Soa embasado sem
+se comprometer.
+
+Por que é gororoba: nomear o real custa. Quem escreve de dentro de uma vida cita a fonte,
+a marca, a pessoa, o lugar. O texto de máquina, ou o apressado, prefere a autoridade
+genérica que ninguém pode checar. O sinal pega a fuga de nomear, não a falta de link: "a
+Fiocruz mediu, não achei o paper" passa, "estudos mostram" acende. É o eixo com o falso
+positivo mais alto, porque às vezes não dá pra nomear mesmo (fonte sob sigilo, NDA), então
+entra como `suggestion`, não `warning`: sinaliza sem bloquear.
+
 ## A trava: voz não é slop
 
 O risco que mata uma régua dessas é o oposto do que ela caça: marcar voz simples ou fala
@@ -83,9 +96,11 @@ que ainda não faz.
 
 ## De onde isto vem
 
-Os três eixos derivam de uma régua de voz pessoal (papo-reto) que o autor já mantinha, ela
-mesma inspirada no [stop-slop](https://github.com/hardikpandya/stop-slop) de Hardik Pandya
-(MIT). O gororoba é a parte dessa régua que generaliza: a que mede sem reescrever, pra
+Os três primeiros eixos derivam de uma régua de voz pessoal (papo-reto) que o autor já
+mantinha, ela mesma inspirada no [stop-slop](https://github.com/hardikpandya/stop-slop) de
+Hardik Pandya (MIT). O quarto, alusão vaga, veio do StoryScope (arXiv 2604.03136), que
+mediu nomeação de entidade real como um dos traços que mais separam ficção humana de
+máquina. O gororoba é a parte dessa régua que generaliza: a que mede sem reescrever, pra
 qualquer um usar no próprio texto.
 
 ---
