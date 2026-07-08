@@ -158,6 +158,13 @@ dura: regra nova entra com fixture (caso que deve pegar) e anti-fixture (caso qu
 pode pegar). Tem template de issue pra falso-positivo e pra regra nova. Sabe falar de um
 canto do Brasil que ainda não está no teste? Esse é o melhor primeiro PR daqui.
 
+## Monte a sua régua
+
+O gororoba pega o slop que é igual pra todo mundo. O que te faz soar você, a sua voz ou a
+da sua marca, ele não sabe. Pra isso tem o [tempero](https://github.com/renanburn/tempero):
+um kit pra você montar a sua própria régua de voz, que roda junto com o gororoba. Um tira o
+requentado, o outro põe o seu tempero.
+
 ## Crédito
 
 Vem da minha régua anti-slop, que eu já mantinha antes, e do
