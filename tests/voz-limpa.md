@@ -78,3 +78,12 @@ apresentadas, ademais, o método se mantém íntegro ao longo de todo o percurso
 Sendo assim, diante do exposto, a hipótese resiste ao escrutínio. Em síntese, outrossim,
 cada premissa encontra respaldo na evidência reunida. Com efeito, em última análise,
 desta forma o raciocínio fecha sem deixar brecha.
+
+## Nomeia o real (deve passar)
+
+Nomear a fonte é o oposto da gororoba. Quem diz de onde tira o que fala passa limpo:
+o sinal de alusão vaga pega quem esconde a fonte, não quem a mostra.
+
+A Fiocruz mediu queda de 12% no índice em 2023. A Natura trocou a fórmula do sabonete
+esse ano. O professor Câmara Cascudo já contava essa história no livro dele. A gente
+testou com trinta pessoas da comunidade e sete voltaram na semana seguinte.

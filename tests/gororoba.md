@@ -13,3 +13,6 @@ Não é sobre tecnologia, é sobre pessoas. Vou estar enviando o relatório aind
 
 Sendo assim, cabe destacar que ademais, dessa forma, observa-se que foi realizado
 com sucesso.
+
+Estudos mostram que uma grande marca já adotou o método. Segundo especialistas,
+pesquisas recentes comprovam o resultado.

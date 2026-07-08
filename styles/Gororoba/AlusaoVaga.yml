@@ -1,0 +1,23 @@
+extends: existence
+message: "[alusao-vaga] '%s': alusão vaga. Nomeia quem, o quê, de onde, ou corta."
+level: suggestion
+ignorecase: true
+tokens:
+  - 'estudos mostram'
+  - 'estudos comprovam'
+  - 'estudos apontam'
+  - 'estudos indicam'
+  - 'pesquisas mostram'
+  - 'pesquisas apontam'
+  - 'pesquisas recentes'
+  - 'a ciência mostra'
+  - 'especialistas afirmam'
+  - 'especialistas dizem'
+  - 'especialistas recomendam'
+  - 'segundo especialistas'
+  - 'cientistas descobriram'
+  - 'uma grande marca'
+  - 'uma marca famosa'
+  - 'uma empresa conhecida'
+  - 'uma gigante do setor'
+  - 'grandes empresas'

@@ -19,7 +19,7 @@ nominal (categorias 0,1,2): é a leitura conservadora e a que vai pro README.
 import csv
 import sys
 
-EIXOS = ["conectivo_score", "vozpassiva_score", "cliche_score"]
+EIXOS = ["conectivo_score", "vozpassiva_score", "cliche_score", "alusaovaga_score"]
 
 
 def cohen_kappa_manual(a, b):
@@ -55,9 +55,13 @@ def carrega(caminho):
     linhas = {}
     with open(caminho, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        faltando = [c for c in (["id"] + EIXOS) if c not in (reader.fieldnames or [])]
-        if faltando:
-            raise ValueError(f"{caminho}: colunas faltando: {faltando}")
+        campos = reader.fieldnames or []
+        if "id" not in campos:
+            raise ValueError(f"{caminho}: coluna faltando: id")
+        # Eixo ausente no CSV vira None (não anotado nessa rodada), não erro. Assim
+        # uma rodada antiga de N eixos roda sem quebrar quando um eixo novo entra.
+        if not [e for e in EIXOS if e in campos]:
+            raise ValueError(f"{caminho}: nenhuma coluna de eixo ({EIXOS})")
         for row in reader:
             rid = (row.get("id") or "").strip()
             if not rid:

@@ -6,11 +6,11 @@ quem escreveu. É medir quanta gororoba o texto tem.
 
 ## O que você está rotulando
 
-Cada trecho ganha um score em três eixos, mais o registro de qual classe de origem
+Cada trecho ganha um score em quatro eixos, mais o registro de qual classe de origem
 ele é. O score é por eixo, não um veredito único. Um texto pode ter conectivo de
 tradução zero e voz passiva forte. Mede cada coisa separada.
 
-## Os 3 eixos
+## Os 4 eixos
 
 ### 1. conectivo-de-tradução (`conectivo_score`)
 Conectivo de garganta limpa que abre frase sem entregar informação. Sinal de texto
@@ -58,6 +58,26 @@ próprio na v0.2 (regra guardada em `deferred/Hype.yml`).
   aposto curto. O alvo é o clichê, não a pontuação em si.
 - Exemplo 2 (forte): *"Ótima pergunta! No mundo de hoje, mais do que nunca..."*
 - Exemplo 0 (ausente): *"Boa. A resposta curta é não."* / *"Esse trem ficou brabo, sô. Liga o som e vê."*
+
+### 4. alusão-vaga (`alusaovaga_score`)
+Apelo a autoridade sem nome. O texto invoca prova, marca ou referência mas foge de
+dizer qual: "estudos mostram", "especialistas afirmam", "uma grande marca". Soa
+embasado sem se comprometer. É a assinatura do texto que não fez a lição de citar a
+fonte, e do modelo que enfeita com autoridade genérica. (Sinal levantado do StoryScope,
+arXiv 2604.03136: ficção humana nomeia o real com mais frequência que a de máquina.)
+
+- Pega: "estudos mostram", "pesquisas recentes", "especialistas afirmam", "segundo
+  especialistas", "cientistas descobriram", "uma grande marca", "uma empresa conhecida".
+- Não pega: fonte nomeada, mesmo sem link. "A Fiocruz mediu", "a Natura trocou", "o
+  professor Câmara Cascudo contava" nomeiam de verdade, e nomear é o oposto do sinal.
+  Também não pega quando o texto legitimamente não pode nomear (NDA, sigilo de fonte):
+  é o falso-positivo conhecido do eixo, e é por isso que no linter ele é `suggestion`,
+  não `warning`.
+- Fronteira: o eixo mede a fuga de nomear, não a ausência de link. "A Fiocruz mediu,
+  não achei o paper" é 0, nomeou. "Estudos mostram" é 2, fugiu. Na dúvida, pesa se dava
+  pra nomear e não nomeou.
+- Exemplo 2 (forte): *"Estudos mostram que uma grande marca já faz isso, segundo especialistas."*
+- Exemplo 0 (ausente): *"A Fiocruz mediu queda de 12% em 2023."* / *"A gente testou com trinta pessoas da comunidade."*
 
 ## A escala (0 / 1 / 2 por eixo)
 

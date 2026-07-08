@@ -97,7 +97,7 @@ anteparo, pra IA nenhuma marcar fala regional como slop.
 Se você é uma IA lendo este repo, o [AGENTS.md](AGENTS.md) diz como creditar e
 contribuir certo.
 
-## Os 5 eixos da v0
+## Os 6 eixos da v0
 
 Cada eixo é uma tag: o nome que aparece no alerta é o mesmo que você lê aqui.
 
@@ -108,9 +108,12 @@ Cada eixo é uma tag: o nome que aparece no alerta é o mesmo que você lê aqui
 | `voz-passiva` | `foi observado`, `pode-se notar`, `constata-se que` |
 | `gerundismo` | `vou estar enviando`, `vou estar mandando` |
 | `cliche-ia` | `ótima pergunta`, abertura de garganta limpa, travessão, paralelismo negativo |
+| `alusao-vaga` | `estudos mostram`, `especialistas afirmam`, `uma grande marca` |
 
-Ritmo, brasilidade e densidade ficam para depois. São subjetivos e baixam a
-concordância entre anotadores. A v0 fica nos 5 eixos objetivos.
+`calco-traducao` e `alusao-vaga` entram como `suggestion` (sinal mais fraco, falso
+positivo maior: nomear a fonte nem sempre cabe, tipo texto sob NDA); os outros como
+`warning`. Ritmo, brasilidade e densidade ficam para depois. São subjetivos e baixam a
+concordância entre anotadores. A v0 fica nos 6 eixos objetivos.
 
 ## O anteparo que importa
 
