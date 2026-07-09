@@ -37,6 +37,15 @@ Você pede, dentro do Claude Code, e ele passa o gororoba no texto: aponta cada 
 
 Prefere terminal cru? A seção [Roda em 3 linhas](#roda-em-3-linhas) mostra o mesmo via CLI.
 
+## Testa no navegador
+
+Sem instalar nada: cola o texto na [demo web](https://1rg.com.br/gororoba) e vê os sinais
+na hora. Roda o mesmo linter deste repo, no servidor, com a mesma régua.
+
+<p align="center">
+  <a href="https://1rg.com.br/gororoba"><img src="assets/demo-web.png" alt="Página da demo web do gororoba, com o título Prova seu texto, a explicação de que a régua aponta o trecho e o porquê sem dar nota, e uma caixa de texto esperando o texto colado" width="820"></a>
+</p>
+
 ## Antes e depois
 
 O mesmo recado, primeiro requentado, depois gostosinho. Entra o gororoba:
@@ -58,6 +67,9 @@ Sai com voz:
 O gororoba acende cinco sinais (duas aberturas de garganta limpa, um conectivo de
 tradução, uma voz passiva, um clichê). Você corta e escolhe o que serve melhor.
 
+Quer mais? [Dez casos reais de antes e depois](docs/casos.md), tirados do dataset do
+projeto, cada um com a saída real do linter.
+
 ## O que é, e o que não é
 
 Os detectores de autoria de IA (GPTZero, Turnitin AI) têm viés comprovado contra quem
@@ -67,6 +79,16 @@ Genericidade é medível e acionável. Autoria não é.
 
 Slop é propriedade do texto, não de quem apertou a tecla no teclado. Tem IA bem usada que sai
 limpa, e tem gente escrevendo gororoba pura sem máquina nenhuma.
+
+## Roda em 1 linha
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/renanburn/gororoba/main/scripts/instalar.sh | bash
+```
+
+Sem sudo, sem brew: instala o Vale e a régua em `~/.gororoba` e deixa o comando `gororoba`
+pronto. Depois é só `gororoba texto.md` (ou colar via stdin). Rodar de novo atualiza a
+régua. Prefere montar à mão? Segue abaixo.
 
 ## Roda em 3 linhas
 
@@ -149,7 +171,9 @@ chamar de "benchmark" antes de ter o kappa dos 113 na mão.
 O [posicionamento](docs/POSICIONAMENTO.md) responde de frente "isso é só
 regex?", "e os falsos positivos?", "pega fala popular?" e "por que confiar sem o kappa?".
 O documento [a régua](docs/a-regua.md) explica o porquê de cada eixo ser slop, e o que a
-régua de propósito não pega.
+régua de propósito não pega. E [onde a régua erra](docs/falsos-positivos.md) assume, eixo
+por eixo, os falsos positivos conhecidos e os limites deliberados: achou ela acendendo em
+fala legítima, é o bug mais grave daqui.
 
 ## Contribuir
 
