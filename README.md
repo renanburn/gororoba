@@ -165,6 +165,9 @@ da sua marca, ele não sabe. Pra isso tem o [tempero](https://github.com/renanbu
 um kit pra você montar a sua própria régua de voz, que roda junto com o gororoba. Um tira o
 requentado, o outro põe o seu tempero.
 
+E pra tela tem o [sobrinho](https://github.com/renanburn/sobrinho): você escreve o cânone da sua
+marca e a IA desenha com ele.
+
 ## Crédito
 
 Vem da minha régua anti-slop, que eu já mantinha antes, e do
